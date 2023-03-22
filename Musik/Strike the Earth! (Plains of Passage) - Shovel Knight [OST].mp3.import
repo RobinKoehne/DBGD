@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lo17qpex08df"
+path="res://.godot/imported/Strike the Earth! (Plains of Passage) - Shovel Knight [OST].mp3-d5f67331dee646e76cc1e17bb4d17345.mp3str"
+
+[deps]
+
+source_file="res://Musik/Strike the Earth! (Plains of Passage) - Shovel Knight [OST].mp3"
+dest_files=["res://.godot/imported/Strike the Earth! (Plains of Passage) - Shovel Knight [OST].mp3-d5f67331dee646e76cc1e17bb4d17345.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
