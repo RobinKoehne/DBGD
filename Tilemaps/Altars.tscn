@@ -1,0 +1,249 @@
+[gd_scene load_steps=50 format=3 uid="uid://6ltr4o1nmjdi"]
+
+[ext_resource type="Texture2D" uid="uid://bvmigfwhf420a" path="res://Sprites/dc-dngn/altars/dngn_altar.png" id="1_u2ghs"]
+[ext_resource type="Texture2D" uid="uid://clv47xs7fj78x" path="res://Sprites/dc-dngn/altars/dngn_altar_beogh.png" id="2_1m6wl"]
+[ext_resource type="Texture2D" uid="uid://d08od76xv1l35" path="res://Sprites/dc-dngn/altars/dngn_altar_cheibriados_02.png" id="3_abtsb"]
+[ext_resource type="Texture2D" uid="uid://bmaeyoc6q0aak" path="res://Sprites/dc-dngn/altars/dngn_altar_cheibriados_03.png" id="4_t8eat"]
+[ext_resource type="Texture2D" uid="uid://ceg5gb066ekss" path="res://Sprites/dc-dngn/altars/dngn_altar_cheibriados_04.png" id="5_qtgei"]
+[ext_resource type="Texture2D" uid="uid://cg5ap4ncf5qor" path="res://Sprites/dc-dngn/altars/dngn_altar_cheibriados_06.png" id="6_71aa0"]
+[ext_resource type="Texture2D" uid="uid://ce3ys4om0nah0" path="res://Sprites/dc-dngn/altars/dngn_altar_cheibriados_08.png" id="7_tgujt"]
+[ext_resource type="Texture2D" uid="uid://dwtp5kl7r1lvc" path="res://Sprites/dc-dngn/altars/dngn_altar_cheibriados_09.png" id="8_v6g0r"]
+[ext_resource type="Texture2D" uid="uid://bg271mnxujlw5" path="res://Sprites/dc-dngn/altars/dngn_altar_cheibriados_10.png" id="9_dv01x"]
+[ext_resource type="Texture2D" uid="uid://dhauksmnjkt43" path="res://Sprites/dc-dngn/altars/dngn_altar_cheibriados_12.png" id="10_ioxmu"]
+[ext_resource type="Texture2D" uid="uid://cbei04kwmo0vw" path="res://Sprites/dc-dngn/altars/dngn_altar_elyvilon.png" id="11_8t8w1"]
+[ext_resource type="Texture2D" uid="uid://cqoicll8cb32p" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva01.png" id="12_8og3i"]
+[ext_resource type="Texture2D" uid="uid://bvef3clv0gv4v" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva02.png" id="13_213vq"]
+[ext_resource type="Texture2D" uid="uid://b07h2k73134vi" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva03.png" id="14_dyeps"]
+[ext_resource type="Texture2D" uid="uid://b16teq6j83dq" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva04.png" id="15_ee0ma"]
+[ext_resource type="Texture2D" uid="uid://cdqonixh5i3fp" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva05.png" id="16_77xkr"]
+[ext_resource type="Texture2D" uid="uid://bvel0qwdo0rgl" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva06.png" id="17_k4do1"]
+[ext_resource type="Texture2D" uid="uid://dq0v1se0wwfjm" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva07.png" id="18_ejmw1"]
+[ext_resource type="Texture2D" uid="uid://cgkujrgi1ul3l" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva08.png" id="19_1ni13"]
+[ext_resource type="Texture2D" uid="uid://chr6ju7qkxasq" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva09.png" id="20_6pln1"]
+[ext_resource type="Texture2D" uid="uid://sjgktmce0yp7" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva10.png" id="21_vtxjo"]
+[ext_resource type="Texture2D" uid="uid://dxwealuyik6wm" path="res://Sprites/dc-dngn/altars/dngn_altar_jiyva11.png" id="22_5k220"]
+[ext_resource type="Texture2D" uid="uid://7ldydw65jovl" path="res://Sprites/dc-dngn/altars/dngn_altar_kikubaaqudgha.png" id="23_3g1hh"]
+[ext_resource type="Texture2D" uid="uid://b8w5jwep12tmr" path="res://Sprites/dc-dngn/altars/dngn_altar_lugonu.png" id="24_hqy4m"]
+[ext_resource type="Texture2D" uid="uid://tsh4eywvkog1" path="res://Sprites/dc-dngn/altars/dngn_altar_makhleb_flame1.png" id="25_d8s36"]
+[ext_resource type="Texture2D" uid="uid://xqrnhml5irso" path="res://Sprites/dc-dngn/altars/dngn_altar_makhleb_flame2.png" id="26_8wtqe"]
+[ext_resource type="Texture2D" uid="uid://dj41rq6s6almf" path="res://Sprites/dc-dngn/altars/dngn_altar_makhleb_flame3.png" id="27_bb758"]
+[ext_resource type="Texture2D" uid="uid://8p5x47rx5rx0" path="res://Sprites/dc-dngn/altars/dngn_altar_makhleb_flame4.png" id="28_75h7o"]
+[ext_resource type="Texture2D" uid="uid://dkmpmdxsy6ein" path="res://Sprites/dc-dngn/altars/dngn_altar_makhleb_flame5.png" id="29_my3mm"]
+[ext_resource type="Texture2D" uid="uid://cn1lvaa17qdk0" path="res://Sprites/dc-dngn/altars/dngn_altar_makhleb_flame6.png" id="30_bf4nw"]
+[ext_resource type="Texture2D" uid="uid://c0w36pwto6tn7" path="res://Sprites/dc-dngn/altars/dngn_altar_makhleb_flame7.png" id="31_pkly2"]
+[ext_resource type="Texture2D" uid="uid://d1oxvf0lxi0rc" path="res://Sprites/dc-dngn/altars/dngn_altar_makhleb_flame8.png" id="32_hbm32"]
+[ext_resource type="Texture2D" uid="uid://crxikgl7xpmd6" path="res://Sprites/dc-dngn/altars/dngn_altar_okawaru.png" id="33_s6bcf"]
+[ext_resource type="Texture2D" uid="uid://bq60lklgiyvb2" path="res://Sprites/dc-dngn/altars/dngn_altar_nemelex_xobeh.png" id="34_uppjn"]
+[ext_resource type="Texture2D" uid="uid://cm2ger1bxvmdr" path="res://Sprites/dc-dngn/altars/dngn_altar_shining_one.png" id="35_4cqiy"]
+[ext_resource type="Texture2D" uid="uid://b3ip6ogcnnws4" path="res://Sprites/dc-dngn/altars/dngn_altar_sif_muna.png" id="36_gm7u3"]
+[ext_resource type="Texture2D" uid="uid://dp1med8xu1xrg" path="res://Sprites/dc-dngn/altars/dngn_altar_trog.png" id="37_u7mv4"]
+[ext_resource type="Texture2D" uid="uid://d0qb1i2kqrt44" path="res://Sprites/dc-dngn/altars/dngn_altar_vehumet.png" id="38_6p34p"]
+[ext_resource type="Texture2D" uid="uid://c3y2o8o78g83r" path="res://Sprites/dc-dngn/altars/dngn_altar_xom0.png" id="39_g7xub"]
+[ext_resource type="Texture2D" uid="uid://cuw6j3d4h0swy" path="res://Sprites/dc-dngn/altars/dngn_altar_xom1.png" id="40_lo3vs"]
+[ext_resource type="Texture2D" uid="uid://cspxa1as4a8lq" path="res://Sprites/dc-dngn/altars/dngn_altar_xom2.png" id="41_a7uqp"]
+[ext_resource type="Texture2D" uid="uid://dbj177u6d4tmm" path="res://Sprites/dc-dngn/altars/dngn_altar_xom3.png" id="42_ihsf3"]
+[ext_resource type="Texture2D" uid="uid://3lofpn5bgoh6" path="res://Sprites/dc-dngn/altars/dngn_altar_xom4.png" id="43_g42hu"]
+[ext_resource type="Texture2D" uid="uid://d1si1hv62m1ie" path="res://Sprites/dc-dngn/altars/dngn_altar_xom5.png" id="44_0xi1u"]
+[ext_resource type="Texture2D" uid="uid://bhyjf2cnhbidr" path="res://Sprites/dc-dngn/altars/dngn_altar_xom6.png" id="45_h2a36"]
+[ext_resource type="Texture2D" uid="uid://bn6txt1qw710a" path="res://Sprites/dc-dngn/altars/dngn_altar_xom7.png" id="46_4sqje"]
+[ext_resource type="Texture2D" uid="uid://cn6cc68mgnqfy" path="res://Sprites/dc-dngn/altars/dngn_altar_yredelemnul.png" id="47_wpmsl"]
+[ext_resource type="Texture2D" uid="uid://taodgs6odct4" path="res://Sprites/dc-dngn/altars/dngn_altar_zin.png" id="48_r44xp"]
+
+[sub_resource type="TileSet" id="TileSet_8lkcu"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_8lkcu")
+cell_quadrant_size = 32
+format = 2
+
+[node name="DngnAltar" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_u2ghs")
+
+[node name="DngnAltarBeogh" type="Sprite2D" parent="."]
+position = Vector2(48, 16)
+texture = ExtResource("2_1m6wl")
+
+[node name="DngnAltarCheibriados02" type="Sprite2D" parent="."]
+position = Vector2(80, 16)
+texture = ExtResource("3_abtsb")
+
+[node name="DngnAltarCheibriados03" type="Sprite2D" parent="."]
+position = Vector2(112, 16)
+texture = ExtResource("4_t8eat")
+
+[node name="DngnAltarCheibriados04" type="Sprite2D" parent="."]
+position = Vector2(144, 16)
+texture = ExtResource("5_qtgei")
+
+[node name="DngnAltarCheibriados06" type="Sprite2D" parent="."]
+position = Vector2(176, 16)
+texture = ExtResource("6_71aa0")
+
+[node name="DngnAltarCheibriados08" type="Sprite2D" parent="."]
+position = Vector2(208, 16)
+texture = ExtResource("7_tgujt")
+
+[node name="DngnAltarCheibriados09" type="Sprite2D" parent="."]
+position = Vector2(240, 16)
+texture = ExtResource("8_v6g0r")
+
+[node name="DngnAltarCheibriados10" type="Sprite2D" parent="."]
+position = Vector2(272, 16)
+texture = ExtResource("9_dv01x")
+
+[node name="DngnAltarCheibriados12" type="Sprite2D" parent="."]
+position = Vector2(304, 16)
+texture = ExtResource("10_ioxmu")
+
+[node name="DngnAltarElyvilon" type="Sprite2D" parent="."]
+position = Vector2(16, 48)
+texture = ExtResource("11_8t8w1")
+
+[node name="DngnAltarJiyva01" type="Sprite2D" parent="."]
+position = Vector2(16, 80)
+texture = ExtResource("12_8og3i")
+
+[node name="DngnAltarJiyva02" type="Sprite2D" parent="."]
+position = Vector2(48, 80)
+texture = ExtResource("13_213vq")
+
+[node name="DngnAltarJiyva03" type="Sprite2D" parent="."]
+position = Vector2(80, 80)
+texture = ExtResource("14_dyeps")
+
+[node name="DngnAltarJiyva04" type="Sprite2D" parent="."]
+position = Vector2(112, 80)
+texture = ExtResource("15_ee0ma")
+
+[node name="DngnAltarJiyva05" type="Sprite2D" parent="."]
+position = Vector2(144, 80)
+texture = ExtResource("16_77xkr")
+
+[node name="DngnAltarJiyva06" type="Sprite2D" parent="."]
+position = Vector2(176, 80)
+texture = ExtResource("17_k4do1")
+
+[node name="DngnAltarJiyva07" type="Sprite2D" parent="."]
+position = Vector2(208, 80)
+texture = ExtResource("18_ejmw1")
+
+[node name="DngnAltarJiyva08" type="Sprite2D" parent="."]
+position = Vector2(240, 80)
+texture = ExtResource("19_1ni13")
+
+[node name="DngnAltarJiyva09" type="Sprite2D" parent="."]
+position = Vector2(272, 80)
+texture = ExtResource("20_6pln1")
+
+[node name="DngnAltarJiyva10" type="Sprite2D" parent="."]
+position = Vector2(304, 80)
+texture = ExtResource("21_vtxjo")
+
+[node name="DngnAltarJiyva11" type="Sprite2D" parent="."]
+position = Vector2(336, 80)
+texture = ExtResource("22_5k220")
+
+[node name="DngnAltarKikubaaqudgha" type="Sprite2D" parent="."]
+position = Vector2(16, 112)
+texture = ExtResource("23_3g1hh")
+
+[node name="DngnAltarLugonu" type="Sprite2D" parent="."]
+position = Vector2(16, 144)
+texture = ExtResource("24_hqy4m")
+
+[node name="DngnAltarMakhlebFlame1" type="Sprite2D" parent="."]
+position = Vector2(16, 176)
+texture = ExtResource("25_d8s36")
+
+[node name="DngnAltarMakhlebFlame2" type="Sprite2D" parent="."]
+position = Vector2(48, 176)
+texture = ExtResource("26_8wtqe")
+
+[node name="DngnAltarMakhlebFlame3" type="Sprite2D" parent="."]
+position = Vector2(80, 176)
+texture = ExtResource("27_bb758")
+
+[node name="DngnAltarMakhlebFlame4" type="Sprite2D" parent="."]
+position = Vector2(112, 176)
+texture = ExtResource("28_75h7o")
+
+[node name="DngnAltarMakhlebFlame5" type="Sprite2D" parent="."]
+position = Vector2(144, 176)
+texture = ExtResource("29_my3mm")
+
+[node name="DngnAltarMakhlebFlame6" type="Sprite2D" parent="."]
+position = Vector2(176, 176)
+texture = ExtResource("30_bf4nw")
+
+[node name="DngnAltarMakhlebFlame7" type="Sprite2D" parent="."]
+position = Vector2(208, 176)
+texture = ExtResource("31_pkly2")
+
+[node name="DngnAltarMakhlebFlame8" type="Sprite2D" parent="."]
+position = Vector2(240, 176)
+texture = ExtResource("32_hbm32")
+
+[node name="DngnAltarOkawaru" type="Sprite2D" parent="."]
+position = Vector2(16, 240)
+texture = ExtResource("33_s6bcf")
+
+[node name="DngnAltarNemelexXobeh" type="Sprite2D" parent="."]
+position = Vector2(16, 208)
+texture = ExtResource("34_uppjn")
+
+[node name="DngnAltarShiningOne" type="Sprite2D" parent="."]
+position = Vector2(16, 272)
+texture = ExtResource("35_4cqiy")
+
+[node name="DngnAltarSifMuna" type="Sprite2D" parent="."]
+position = Vector2(16, 304)
+texture = ExtResource("36_gm7u3")
+
+[node name="DngnAltarTrog" type="Sprite2D" parent="."]
+position = Vector2(16, 336)
+texture = ExtResource("37_u7mv4")
+
+[node name="DngnAltarVehumet" type="Sprite2D" parent="."]
+position = Vector2(16, 368)
+texture = ExtResource("38_6p34p")
+
+[node name="DngnAltarXom0" type="Sprite2D" parent="."]
+position = Vector2(16, 400)
+texture = ExtResource("39_g7xub")
+
+[node name="DngnAltarXom1" type="Sprite2D" parent="."]
+position = Vector2(48, 400)
+texture = ExtResource("40_lo3vs")
+
+[node name="DngnAltarXom2" type="Sprite2D" parent="."]
+position = Vector2(80, 400)
+texture = ExtResource("41_a7uqp")
+
+[node name="DngnAltarXom3" type="Sprite2D" parent="."]
+position = Vector2(112, 400)
+texture = ExtResource("42_ihsf3")
+
+[node name="DngnAltarXom4" type="Sprite2D" parent="."]
+position = Vector2(144, 400)
+texture = ExtResource("43_g42hu")
+
+[node name="DngnAltarXom5" type="Sprite2D" parent="."]
+position = Vector2(176, 400)
+texture = ExtResource("44_0xi1u")
+
+[node name="DngnAltarXom6" type="Sprite2D" parent="."]
+position = Vector2(208, 400)
+texture = ExtResource("45_h2a36")
+
+[node name="DngnAltarXom7" type="Sprite2D" parent="."]
+position = Vector2(240, 400)
+texture = ExtResource("46_4sqje")
+
+[node name="DngnAltarYredelemnul" type="Sprite2D" parent="."]
+position = Vector2(16, 432)
+texture = ExtResource("47_wpmsl")
+
+[node name="DngnAltarZin" type="Sprite2D" parent="."]
+position = Vector2(16, 464)
+texture = ExtResource("48_r44xp")

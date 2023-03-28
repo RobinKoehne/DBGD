@@ -1,0 +1,534 @@
+[gd_scene load_steps=107 format=3 uid="uid://cmged6ytr083d"]
+
+[ext_resource type="Texture2D" uid="uid://wv3ux20no4u3" path="res://Sprites/dc-mon/animals/alligator.png" id="1_bsc8i"]
+[ext_resource type="Texture2D" uid="uid://cv4acmju0mae" path="res://Sprites/dc-mon/animals/alligator_baby.png" id="2_w5jyv"]
+[ext_resource type="Texture2D" uid="uid://cbel5q8y01e2g" path="res://Sprites/dc-mon/animals/alligator_snapping_turtle.png" id="3_6uyay"]
+[ext_resource type="Texture2D" uid="uid://ymive35a3urt" path="res://Sprites/dc-mon/animals/anaconda.png" id="4_fl105"]
+[ext_resource type="Texture2D" uid="uid://dlkpws8la36s5" path="res://Sprites/dc-mon/animals/bear.png" id="5_pqcou"]
+[ext_resource type="Texture2D" uid="uid://c7iq0234hiksy" path="res://Sprites/dc-mon/animals/big_fish.png" id="6_odjq2"]
+[ext_resource type="Texture2D" uid="uid://cgrx6xdpdkq8l" path="res://Sprites/dc-mon/animals/black_mamba.png" id="7_nh6sk"]
+[ext_resource type="Texture2D" uid="uid://cirsoig6vkhhr" path="res://Sprites/dc-mon/animals/black_bear.png" id="8_yrgdm"]
+[ext_resource type="Texture2D" uid="uid://civ2hhb6ccro" path="res://Sprites/dc-mon/animals/black_sheep.png" id="9_g6sge"]
+[ext_resource type="Texture2D" uid="uid://b87hm2t3gto3p" path="res://Sprites/dc-mon/animals/blink_frog.png" id="10_1ur8c"]
+[ext_resource type="Texture2D" uid="uid://cnlyjkdc437jv" path="res://Sprites/dc-mon/animals/boring_beetle.png" id="11_tvfcv"]
+[ext_resource type="Texture2D" uid="uid://f68wmbcd1tbx" path="res://Sprites/dc-mon/animals/boulder_beetle.png" id="12_imd8t"]
+[ext_resource type="Texture2D" uid="uid://cnnhm455qpghe" path="res://Sprites/dc-mon/animals/brain_worm.png" id="13_iiuc4"]
+[ext_resource type="Texture2D" uid="uid://bkdhr70pkvfcp" path="res://Sprites/dc-mon/animals/bumblebee.png" id="14_6jakv"]
+[ext_resource type="Texture2D" uid="uid://ucvl8efe055l" path="res://Sprites/dc-mon/animals/butterfly1.png" id="15_ts4c6"]
+[ext_resource type="Texture2D" uid="uid://deo0sek5n1o64" path="res://Sprites/dc-mon/animals/butterfly2.png" id="16_hkguy"]
+[ext_resource type="Texture2D" uid="uid://dg5fnbw6bk8fo" path="res://Sprites/dc-mon/animals/butterfly3.png" id="17_oxcuk"]
+[ext_resource type="Texture2D" uid="uid://c4kt4x8pub3cq" path="res://Sprites/dc-mon/animals/butterfly4.png" id="18_pov32"]
+[ext_resource type="Texture2D" uid="uid://v7yerjmktqbr" path="res://Sprites/dc-mon/animals/butterfly5.png" id="19_p7hj5"]
+[ext_resource type="Texture2D" uid="uid://boji1egr4hsrw" path="res://Sprites/dc-mon/animals/butterfly6.png" id="20_lsa4t"]
+[ext_resource type="Texture2D" uid="uid://cag1oekckkqpq" path="res://Sprites/dc-mon/animals/butterfly.png" id="21_o7h16"]
+[ext_resource type="Texture2D" uid="uid://cngnjpy08l4lb" path="res://Sprites/dc-mon/animals/crocodile.png" id="22_kmloi"]
+[ext_resource type="Texture2D" uid="uid://cttskbc3cocdu" path="res://Sprites/dc-mon/animals/death_yak.png" id="23_r7f4q"]
+[ext_resource type="Texture2D" uid="uid://dxodtxcgxiqlh" path="res://Sprites/dc-mon/animals/electric_eel.png" id="24_4lhma"]
+[ext_resource type="Texture2D" uid="uid://b60x8mxybnsoy" path="res://Sprites/dc-mon/animals/elephant.png" id="25_rvf37"]
+[ext_resource type="Texture2D" uid="uid://cbjm3bngeqiyk" path="res://Sprites/dc-mon/animals/elephant_demonic.png" id="26_5n3x0"]
+[ext_resource type="Texture2D" uid="uid://pr1vi464yykk" path="res://Sprites/dc-mon/animals/elephant_dire.png" id="27_wcwbq"]
+[ext_resource type="Texture2D" uid="uid://cxvqyycei7fy1" path="res://Sprites/dc-mon/animals/elephant_slug.png" id="28_hk0gm"]
+[ext_resource type="Texture2D" uid="uid://c71hi6cij44t5" path="res://Sprites/dc-mon/animals/ghost_moth.png" id="29_xsh5e"]
+[ext_resource type="Texture2D" uid="uid://bfo2jwnmesdbr" path="res://Sprites/dc-mon/animals/giant_ant.png" id="30_c50e3"]
+[ext_resource type="Texture2D" uid="uid://bqiehhfnmc5m1" path="res://Sprites/dc-mon/animals/giant_bat.png" id="31_v5p01"]
+[ext_resource type="Texture2D" uid="uid://brpirxwhnid2" path="res://Sprites/dc-mon/animals/giant_beetle.png" id="32_16icl"]
+[ext_resource type="Texture2D" uid="uid://creufigja4by0" path="res://Sprites/dc-mon/animals/giant_blowfly.png" id="33_qt4wn"]
+[ext_resource type="Texture2D" uid="uid://cg88y72mt6gdd" path="res://Sprites/dc-mon/animals/giant_centipede.png" id="34_dmr14"]
+[ext_resource type="Texture2D" uid="uid://bdx52a1t5tbi8" path="res://Sprites/dc-mon/animals/giant_cockroach.png" id="35_cbjt3"]
+[ext_resource type="Texture2D" uid="uid://wpumamq0apl7" path="res://Sprites/dc-mon/animals/giant_firefly.png" id="36_2ts2n"]
+[ext_resource type="Texture2D" uid="uid://deimtisdf8iwn" path="res://Sprites/dc-mon/animals/giant_frog.png" id="37_rhjp5"]
+[ext_resource type="Texture2D" uid="uid://b02x7p37pg83d" path="res://Sprites/dc-mon/animals/giant_gecko.png" id="38_bko81"]
+[ext_resource type="Texture2D" uid="uid://s8vd8e3t6kch" path="res://Sprites/dc-mon/animals/giant_goldfish.png" id="39_eqvcx"]
+[ext_resource type="Texture2D" uid="uid://cgag67anm1wm1" path="res://Sprites/dc-mon/animals/giant_leech.png" id="40_qjym6"]
+[ext_resource type="Texture2D" uid="uid://df1oketglmpbh" path="res://Sprites/dc-mon/animals/giant_mite.png" id="41_qet2a"]
+[ext_resource type="Texture2D" uid="uid://bnmdcysa0d2nc" path="res://Sprites/dc-mon/animals/giant_mosquito.png" id="42_ynurq"]
+[ext_resource type="Texture2D" uid="uid://yp4m61x8fbmf" path="res://Sprites/dc-mon/animals/giant_newt.png" id="43_dmu3q"]
+[ext_resource type="Texture2D" uid="uid://bp1u8hugfhvo8" path="res://Sprites/dc-mon/animals/giant_scorpion.png" id="44_t248l"]
+[ext_resource type="Texture2D" uid="uid://yg3fj3si4728" path="res://Sprites/dc-mon/animals/giant_slug.png" id="45_s7ooo"]
+[ext_resource type="Texture2D" uid="uid://0tka5eqkrq5x" path="res://Sprites/dc-mon/animals/giant_snail.png" id="46_bjg4y"]
+[ext_resource type="Texture2D" uid="uid://bi2hrqskqn1ts" path="res://Sprites/dc-mon/animals/giant_toad.png" id="47_wrm62"]
+[ext_resource type="Texture2D" uid="uid://bsb5pmr4bd32" path="res://Sprites/dc-mon/animals/gila_monster.png" id="48_ke8vm"]
+[ext_resource type="Texture2D" uid="uid://cnax0lm3461wj" path="res://Sprites/dc-mon/animals/green_rat.png" id="49_477te"]
+[ext_resource type="Texture2D" uid="uid://d1beb0or66q8v" path="res://Sprites/dc-mon/animals/grey_rat.png" id="50_jsomq"]
+[ext_resource type="Texture2D" uid="uid://bvyu56shvrh37" path="res://Sprites/dc-mon/animals/grizzly_bear.png" id="51_h5n3d"]
+[ext_resource type="Texture2D" uid="uid://bjbb2ep6uav75" path="res://Sprites/dc-mon/animals/hell_hog.png" id="52_uakie"]
+[ext_resource type="Texture2D" uid="uid://bu0iv1dtiwr7u" path="res://Sprites/dc-mon/animals/hell_hound.png" id="53_imin2"]
+[ext_resource type="Texture2D" uid="uid://cnbtf84hhy5vw" path="res://Sprites/dc-mon/animals/hog.png" id="54_dp2sq"]
+[ext_resource type="Texture2D" uid="uid://cnh7ndr8t12m0" path="res://Sprites/dc-mon/animals/hound.png" id="55_4dv8y"]
+[ext_resource type="Texture2D" uid="uid://byle1k00u3bqq" path="res://Sprites/dc-mon/animals/iguana.png" id="56_crtb5"]
+[ext_resource type="Texture2D" uid="uid://ry7i3p6ccbe1" path="res://Sprites/dc-mon/animals/jackal.png" id="57_022we"]
+[ext_resource type="Texture2D" uid="uid://cwht2qm7wjxy3" path="res://Sprites/dc-mon/animals/jellyfish.png" id="58_wujij"]
+[ext_resource type="Texture2D" uid="uid://dcrealyi8ibie" path="res://Sprites/dc-mon/animals/jumping_spider.png" id="59_7d4jw"]
+[ext_resource type="Texture2D" uid="uid://byvy8efhts4oq" path="res://Sprites/dc-mon/animals/killer_bee.png" id="60_5ax8r"]
+[ext_resource type="Texture2D" uid="uid://bovfbxejf6aqk" path="res://Sprites/dc-mon/animals/killer_bee_larva.png" id="61_5ah7f"]
+[ext_resource type="Texture2D" uid="uid://unrqs86c8bu2" path="res://Sprites/dc-mon/animals/komodo_dragon.png" id="62_3ia47"]
+[ext_resource type="Texture2D" uid="uid://cx1j3kiaibubc" path="res://Sprites/dc-mon/animals/kraken_head.png" id="63_d51p8"]
+[ext_resource type="Texture2D" uid="uid://bybvnprcgcliy" path="res://Sprites/dc-mon/animals/kraken_tentacle1.png" id="64_lbq8i"]
+[ext_resource type="Texture2D" uid="uid://d1fgo5e8o50f1" path="res://Sprites/dc-mon/animals/kraken_tentacle2.png" id="65_ykyxa"]
+[ext_resource type="Texture2D" uid="uid://bghmqmkdfkxaa" path="res://Sprites/dc-mon/animals/kraken_tentacle3.png" id="66_rdhw6"]
+[ext_resource type="Texture2D" uid="uid://bnwd6laxi0ao7" path="res://Sprites/dc-mon/animals/kraken_tentacle4.png" id="67_ow5kf"]
+[ext_resource type="Texture2D" uid="uid://ru3i15txugf2" path="res://Sprites/dc-mon/animals/kraken_tentacle5.png" id="68_s0ad0"]
+[ext_resource type="Texture2D" uid="uid://corblbqesnjc4" path="res://Sprites/dc-mon/animals/kraken_tentacle6.png" id="69_vscx1"]
+[ext_resource type="Texture2D" uid="uid://dshsb630cvchb" path="res://Sprites/dc-mon/animals/lava_fish.png" id="70_6qm22"]
+[ext_resource type="Texture2D" uid="uid://dkffce3ca7nl2" path="res://Sprites/dc-mon/animals/lava_snake.png" id="71_q6or1"]
+[ext_resource type="Texture2D" uid="uid://looiumg0xb0t" path="res://Sprites/dc-mon/animals/lava_worm.png" id="72_1slop"]
+[ext_resource type="Texture2D" uid="uid://duo7q0ivgq3h7" path="res://Sprites/dc-mon/animals/moth_of_wrath.png" id="73_dubt0"]
+[ext_resource type="Texture2D" uid="uid://dl46uppht47ry" path="res://Sprites/dc-mon/animals/orange_rat.png" id="74_b4l3g"]
+[ext_resource type="Texture2D" uid="uid://ggs3w4w54tuh" path="res://Sprites/dc-mon/animals/polar_bear.png" id="75_uh5xc"]
+[ext_resource type="Texture2D" uid="uid://bmwqre88qf0ta" path="res://Sprites/dc-mon/animals/queen_ant.png" id="76_1af4f"]
+[ext_resource type="Texture2D" uid="uid://cts2rebyd6rtk" path="res://Sprites/dc-mon/animals/queen_bee.png" id="77_ru06w"]
+[ext_resource type="Texture2D" uid="uid://gxsef6orvcfo" path="res://Sprites/dc-mon/animals/quokka.png" id="78_kys7g"]
+[ext_resource type="Texture2D" uid="uid://rua3nfpi8vi1" path="res://Sprites/dc-mon/animals/rat.png" id="79_xc7mk"]
+[ext_resource type="Texture2D" uid="uid://dqpg1051von65" path="res://Sprites/dc-mon/animals/redback.png" id="80_le5kl"]
+[ext_resource type="Texture2D" uid="uid://ytur5dsf7wj1" path="res://Sprites/dc-mon/animals/red_wasp.png" id="81_uar3v"]
+[ext_resource type="Texture2D" uid="uid://dpsakt6f5idem" path="res://Sprites/dc-mon/animals/rock_worm.png" id="82_1xm1c"]
+[ext_resource type="Texture2D" uid="uid://bt6q7glrolibt" path="res://Sprites/dc-mon/animals/salamander.png" id="83_qxfdv"]
+[ext_resource type="Texture2D" uid="uid://dk4dvqwtwnvyl" path="res://Sprites/dc-mon/animals/scorpion.png" id="84_qlmjd"]
+[ext_resource type="Texture2D" uid="uid://6m1d4d8djlhq" path="res://Sprites/dc-mon/animals/sea_snake.png" id="85_r7vtl"]
+[ext_resource type="Texture2D" uid="uid://c41117ubmqq02" path="res://Sprites/dc-mon/animals/shark.png" id="86_n8tg4"]
+[ext_resource type="Texture2D" uid="uid://d18lvom7sxruy" path="res://Sprites/dc-mon/animals/sheep.png" id="87_o8hew"]
+[ext_resource type="Texture2D" uid="uid://d0w0mtsjfepry" path="res://Sprites/dc-mon/animals/small_snake.png" id="88_ic80d"]
+[ext_resource type="Texture2D" uid="uid://dhbt00wl8mvql" path="res://Sprites/dc-mon/animals/snake.png" id="89_ymino"]
+[ext_resource type="Texture2D" uid="uid://ddhc5a3a6ugkr" path="res://Sprites/dc-mon/animals/snapping_turtle.png" id="90_dxlhq"]
+[ext_resource type="Texture2D" uid="uid://1nijsbrxostf" path="res://Sprites/dc-mon/animals/soldier_ant.png" id="91_h7dql"]
+[ext_resource type="Texture2D" uid="uid://cmb5wilxppvb6" path="res://Sprites/dc-mon/animals/spiny_frog.png" id="92_g50sr"]
+[ext_resource type="Texture2D" uid="uid://btudq3apu178e" path="res://Sprites/dc-mon/animals/spiny_worm.png" id="93_aivv1"]
+[ext_resource type="Texture2D" uid="uid://c2j0kbp0kplsf" path="res://Sprites/dc-mon/animals/swamp_worm.png" id="94_j53r7"]
+[ext_resource type="Texture2D" uid="uid://w5ylprisimca" path="res://Sprites/dc-mon/animals/tarantella.png" id="95_ljetr"]
+[ext_resource type="Texture2D" uid="uid://bu4avtpb0eu5i" path="res://Sprites/dc-mon/animals/trapdoor_spider.png" id="96_swpeg"]
+[ext_resource type="Texture2D" uid="uid://bjltnyvt2a6v1" path="res://Sprites/dc-mon/animals/viper.png" id="97_26y3x"]
+[ext_resource type="Texture2D" uid="uid://cy5llh8n4tla2" path="res://Sprites/dc-mon/animals/warg.png" id="98_sectc"]
+[ext_resource type="Texture2D" uid="uid://cngw2531bqago" path="res://Sprites/dc-mon/animals/war_dog.png" id="99_25uji"]
+[ext_resource type="Texture2D" uid="uid://c5vxphi82wbrv" path="res://Sprites/dc-mon/animals/water_moccasin.png" id="100_4kyng"]
+[ext_resource type="Texture2D" uid="uid://bcrkbge825j1u" path="res://Sprites/dc-mon/animals/wolf.png" id="101_ufb7c"]
+[ext_resource type="Texture2D" uid="uid://txdw1eon8xg" path="res://Sprites/dc-mon/animals/wolf_spider.png" id="102_evyog"]
+[ext_resource type="Texture2D" uid="uid://cbmxcdquykfhg" path="res://Sprites/dc-mon/animals/worm.png" id="103_j6a54"]
+[ext_resource type="Texture2D" uid="uid://bry3q4y3w4mdg" path="res://Sprites/dc-mon/animals/yak.png" id="104_6wmt8"]
+[ext_resource type="Texture2D" uid="uid://bajp64jx3l2oy" path="res://Sprites/dc-mon/animals/yellow_wasp.png" id="105_ypyu1"]
+
+[sub_resource type="TileSet" id="TileSet_ll6qm"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_ll6qm")
+cell_quadrant_size = 32
+format = 2
+
+[node name="Alligator" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_bsc8i")
+
+[node name="AlligatorBaby" type="Sprite2D" parent="."]
+position = Vector2(48, 16)
+texture = ExtResource("2_w5jyv")
+
+[node name="AlligatorSnappingTurtle" type="Sprite2D" parent="."]
+position = Vector2(16, 48)
+texture = ExtResource("3_6uyay")
+
+[node name="Anaconda" type="Sprite2D" parent="."]
+position = Vector2(16, 80)
+texture = ExtResource("4_fl105")
+
+[node name="Bear" type="Sprite2D" parent="."]
+position = Vector2(16, 112)
+texture = ExtResource("5_pqcou")
+
+[node name="BigFish" type="Sprite2D" parent="."]
+position = Vector2(16, 144)
+texture = ExtResource("6_odjq2")
+
+[node name="BlackMamba" type="Sprite2D" parent="."]
+position = Vector2(16, 208)
+texture = ExtResource("7_nh6sk")
+
+[node name="BlackBear" type="Sprite2D" parent="."]
+position = Vector2(16, 176)
+texture = ExtResource("8_yrgdm")
+
+[node name="BlackSheep" type="Sprite2D" parent="."]
+position = Vector2(16, 240)
+texture = ExtResource("9_g6sge")
+
+[node name="BlinkFrog" type="Sprite2D" parent="."]
+position = Vector2(16, 272)
+texture = ExtResource("10_1ur8c")
+
+[node name="BoringBeetle" type="Sprite2D" parent="."]
+position = Vector2(16, 304)
+texture = ExtResource("11_tvfcv")
+
+[node name="BoulderBeetle" type="Sprite2D" parent="."]
+position = Vector2(16, 336)
+texture = ExtResource("12_imd8t")
+
+[node name="BrainWorm" type="Sprite2D" parent="."]
+position = Vector2(16, 368)
+texture = ExtResource("13_iiuc4")
+
+[node name="Bumblebee" type="Sprite2D" parent="."]
+position = Vector2(16, 400)
+texture = ExtResource("14_6jakv")
+
+[node name="Butterfly1" type="Sprite2D" parent="."]
+position = Vector2(16, 432)
+texture = ExtResource("15_ts4c6")
+
+[node name="Butterfly2" type="Sprite2D" parent="."]
+position = Vector2(48, 432)
+texture = ExtResource("16_hkguy")
+
+[node name="Butterfly3" type="Sprite2D" parent="."]
+position = Vector2(80, 432)
+texture = ExtResource("17_oxcuk")
+
+[node name="Butterfly4" type="Sprite2D" parent="."]
+position = Vector2(112, 432)
+texture = ExtResource("18_pov32")
+
+[node name="Butterfly5" type="Sprite2D" parent="."]
+position = Vector2(144, 432)
+texture = ExtResource("19_p7hj5")
+
+[node name="Butterfly6" type="Sprite2D" parent="."]
+position = Vector2(176, 432)
+texture = ExtResource("20_lsa4t")
+
+[node name="Butterfly" type="Sprite2D" parent="."]
+position = Vector2(208, 432)
+texture = ExtResource("21_o7h16")
+
+[node name="Crocodile" type="Sprite2D" parent="."]
+position = Vector2(16, 464)
+texture = ExtResource("22_kmloi")
+
+[node name="DeathYak" type="Sprite2D" parent="."]
+position = Vector2(16, 496)
+texture = ExtResource("23_r7f4q")
+
+[node name="ElectricEel" type="Sprite2D" parent="."]
+position = Vector2(16, 528)
+texture = ExtResource("24_4lhma")
+
+[node name="Elephant" type="Sprite2D" parent="."]
+position = Vector2(16, 560)
+texture = ExtResource("25_rvf37")
+
+[node name="ElephantDemonic" type="Sprite2D" parent="."]
+position = Vector2(48, 560)
+texture = ExtResource("26_5n3x0")
+
+[node name="ElephantDire" type="Sprite2D" parent="."]
+position = Vector2(80, 560)
+texture = ExtResource("27_wcwbq")
+
+[node name="ElephantSlug" type="Sprite2D" parent="."]
+position = Vector2(16, 592)
+texture = ExtResource("28_hk0gm")
+
+[node name="GhostMoth" type="Sprite2D" parent="."]
+position = Vector2(16, 624)
+texture = ExtResource("29_xsh5e")
+
+[node name="GiantAnt" type="Sprite2D" parent="."]
+position = Vector2(16, 656)
+texture = ExtResource("30_c50e3")
+
+[node name="GiantBat" type="Sprite2D" parent="."]
+position = Vector2(16, 688)
+texture = ExtResource("31_v5p01")
+
+[node name="GiantBeetle" type="Sprite2D" parent="."]
+position = Vector2(16, 720)
+texture = ExtResource("32_16icl")
+
+[node name="GiantBlowfly" type="Sprite2D" parent="."]
+position = Vector2(16, 752)
+texture = ExtResource("33_qt4wn")
+
+[node name="GiantCentipede" type="Sprite2D" parent="."]
+position = Vector2(16, 784)
+texture = ExtResource("34_dmr14")
+
+[node name="GiantCockroach" type="Sprite2D" parent="."]
+position = Vector2(16, 816)
+texture = ExtResource("35_cbjt3")
+
+[node name="GiantFirefly" type="Sprite2D" parent="."]
+position = Vector2(16, 848)
+texture = ExtResource("36_2ts2n")
+
+[node name="GiantFrog" type="Sprite2D" parent="."]
+position = Vector2(16, 880)
+texture = ExtResource("37_rhjp5")
+
+[node name="GiantGecko" type="Sprite2D" parent="."]
+position = Vector2(16, 912)
+texture = ExtResource("38_bko81")
+
+[node name="GiantGoldfish" type="Sprite2D" parent="."]
+position = Vector2(16, 944)
+texture = ExtResource("39_eqvcx")
+
+[node name="GiantLeech" type="Sprite2D" parent="."]
+position = Vector2(16, 976)
+texture = ExtResource("40_qjym6")
+
+[node name="GiantMite" type="Sprite2D" parent="."]
+position = Vector2(16, 1008)
+texture = ExtResource("41_qet2a")
+
+[node name="GiantMosquito" type="Sprite2D" parent="."]
+position = Vector2(16, 1040)
+texture = ExtResource("42_ynurq")
+
+[node name="GiantNewt" type="Sprite2D" parent="."]
+position = Vector2(16, 1072)
+texture = ExtResource("43_dmu3q")
+
+[node name="GiantScorpion" type="Sprite2D" parent="."]
+position = Vector2(16, 1104)
+texture = ExtResource("44_t248l")
+
+[node name="GiantSlug" type="Sprite2D" parent="."]
+position = Vector2(16, 1136)
+texture = ExtResource("45_s7ooo")
+
+[node name="GiantSnail" type="Sprite2D" parent="."]
+position = Vector2(16, 1168)
+texture = ExtResource("46_bjg4y")
+
+[node name="GiantToad" type="Sprite2D" parent="."]
+position = Vector2(16, 1200)
+texture = ExtResource("47_wrm62")
+
+[node name="GilaMonster" type="Sprite2D" parent="."]
+position = Vector2(16, 1232)
+texture = ExtResource("48_ke8vm")
+
+[node name="GreenRat" type="Sprite2D" parent="."]
+position = Vector2(16, 1264)
+texture = ExtResource("49_477te")
+
+[node name="GreyRat" type="Sprite2D" parent="."]
+position = Vector2(16, 1296)
+texture = ExtResource("50_jsomq")
+
+[node name="GrizzlyBear" type="Sprite2D" parent="."]
+position = Vector2(16, 1328)
+texture = ExtResource("51_h5n3d")
+
+[node name="HellHog" type="Sprite2D" parent="."]
+position = Vector2(16, 1360)
+texture = ExtResource("52_uakie")
+
+[node name="HellHound" type="Sprite2D" parent="."]
+position = Vector2(16, 1392)
+texture = ExtResource("53_imin2")
+
+[node name="Hog" type="Sprite2D" parent="."]
+position = Vector2(48, 1360)
+texture = ExtResource("54_dp2sq")
+
+[node name="Hound" type="Sprite2D" parent="."]
+position = Vector2(48, 1392)
+texture = ExtResource("55_4dv8y")
+
+[node name="Iguana" type="Sprite2D" parent="."]
+position = Vector2(16, 1424)
+texture = ExtResource("56_crtb5")
+
+[node name="Jackal" type="Sprite2D" parent="."]
+position = Vector2(16, 1456)
+texture = ExtResource("57_022we")
+
+[node name="Jellyfish" type="Sprite2D" parent="."]
+position = Vector2(16, 1488)
+texture = ExtResource("58_wujij")
+
+[node name="JumpingSpider" type="Sprite2D" parent="."]
+position = Vector2(16, 1520)
+texture = ExtResource("59_7d4jw")
+
+[node name="KillerBee" type="Sprite2D" parent="."]
+position = Vector2(16, 1552)
+texture = ExtResource("60_5ax8r")
+
+[node name="KillerBeeLarva" type="Sprite2D" parent="."]
+position = Vector2(48, 1552)
+texture = ExtResource("61_5ah7f")
+
+[node name="KomodoDragon" type="Sprite2D" parent="."]
+position = Vector2(16, 1584)
+texture = ExtResource("62_3ia47")
+
+[node name="KrakenHead" type="Sprite2D" parent="."]
+position = Vector2(16, 1616)
+texture = ExtResource("63_d51p8")
+
+[node name="KrakenTentacle1" type="Sprite2D" parent="."]
+position = Vector2(16, 1648)
+texture = ExtResource("64_lbq8i")
+
+[node name="KrakenTentacle2" type="Sprite2D" parent="."]
+position = Vector2(48, 1648)
+texture = ExtResource("65_ykyxa")
+
+[node name="KrakenTentacle3" type="Sprite2D" parent="."]
+position = Vector2(80, 1648)
+texture = ExtResource("66_rdhw6")
+
+[node name="KrakenTentacle4" type="Sprite2D" parent="."]
+position = Vector2(112, 1648)
+texture = ExtResource("67_ow5kf")
+
+[node name="KrakenTentacle5" type="Sprite2D" parent="."]
+position = Vector2(144, 1648)
+texture = ExtResource("68_s0ad0")
+
+[node name="KrakenTentacle6" type="Sprite2D" parent="."]
+position = Vector2(176, 1648)
+texture = ExtResource("69_vscx1")
+
+[node name="LavaFish" type="Sprite2D" parent="."]
+position = Vector2(16, 1680)
+texture = ExtResource("70_6qm22")
+
+[node name="LavaSnake" type="Sprite2D" parent="."]
+position = Vector2(16, 1712)
+texture = ExtResource("71_q6or1")
+
+[node name="LavaWorm" type="Sprite2D" parent="."]
+position = Vector2(16, 1744)
+texture = ExtResource("72_1slop")
+
+[node name="MothOfWrath" type="Sprite2D" parent="."]
+position = Vector2(16, 1776)
+texture = ExtResource("73_dubt0")
+
+[node name="OrangeRat" type="Sprite2D" parent="."]
+position = Vector2(16, 1808)
+texture = ExtResource("74_b4l3g")
+
+[node name="PolarBear" type="Sprite2D" parent="."]
+position = Vector2(16, 1840)
+texture = ExtResource("75_uh5xc")
+
+[node name="QueenAnt" type="Sprite2D" parent="."]
+position = Vector2(16, 1872)
+texture = ExtResource("76_1af4f")
+
+[node name="QueenBee" type="Sprite2D" parent="."]
+position = Vector2(16, 1904)
+texture = ExtResource("77_ru06w")
+
+[node name="Quokka" type="Sprite2D" parent="."]
+position = Vector2(16, 1936)
+texture = ExtResource("78_kys7g")
+
+[node name="Rat" type="Sprite2D" parent="."]
+position = Vector2(16, 1968)
+texture = ExtResource("79_xc7mk")
+
+[node name="Redback" type="Sprite2D" parent="."]
+position = Vector2(16, 2000)
+texture = ExtResource("80_le5kl")
+
+[node name="RedWasp" type="Sprite2D" parent="."]
+position = Vector2(16, 2032)
+texture = ExtResource("81_uar3v")
+
+[node name="RockWorm" type="Sprite2D" parent="."]
+position = Vector2(16, 2064)
+texture = ExtResource("82_1xm1c")
+
+[node name="Salamander" type="Sprite2D" parent="."]
+position = Vector2(16, 2096)
+texture = ExtResource("83_qxfdv")
+
+[node name="Scorpion" type="Sprite2D" parent="."]
+position = Vector2(16, 2128)
+texture = ExtResource("84_qlmjd")
+
+[node name="SeaSnake" type="Sprite2D" parent="."]
+position = Vector2(16, 2160)
+texture = ExtResource("85_r7vtl")
+
+[node name="Shark" type="Sprite2D" parent="."]
+position = Vector2(16, 2192)
+texture = ExtResource("86_n8tg4")
+
+[node name="Sheep" type="Sprite2D" parent="."]
+position = Vector2(16, 2224)
+texture = ExtResource("87_o8hew")
+
+[node name="SmallSnake" type="Sprite2D" parent="."]
+position = Vector2(16, 2256)
+texture = ExtResource("88_ic80d")
+
+[node name="Snake" type="Sprite2D" parent="."]
+position = Vector2(16, 2288)
+texture = ExtResource("89_ymino")
+
+[node name="SnappingTurtle" type="Sprite2D" parent="."]
+position = Vector2(16, 2320)
+texture = ExtResource("90_dxlhq")
+
+[node name="SoldierAnt" type="Sprite2D" parent="."]
+position = Vector2(16, 2352)
+texture = ExtResource("91_h7dql")
+
+[node name="SpinyFrog" type="Sprite2D" parent="."]
+position = Vector2(16, 2384)
+texture = ExtResource("92_g50sr")
+
+[node name="SpinyWorm" type="Sprite2D" parent="."]
+position = Vector2(16, 2416)
+texture = ExtResource("93_aivv1")
+
+[node name="SwampWorm" type="Sprite2D" parent="."]
+position = Vector2(16, 2448)
+texture = ExtResource("94_j53r7")
+
+[node name="Tarantella" type="Sprite2D" parent="."]
+position = Vector2(16, 2480)
+texture = ExtResource("95_ljetr")
+
+[node name="TrapdoorSpider" type="Sprite2D" parent="."]
+position = Vector2(16, 2512)
+texture = ExtResource("96_swpeg")
+
+[node name="Viper" type="Sprite2D" parent="."]
+position = Vector2(16, 2544)
+texture = ExtResource("97_26y3x")
+
+[node name="Warg" type="Sprite2D" parent="."]
+position = Vector2(16, 2576)
+texture = ExtResource("98_sectc")
+
+[node name="WarDog" type="Sprite2D" parent="."]
+position = Vector2(16, 2608)
+texture = ExtResource("99_25uji")
+
+[node name="WaterMoccasin" type="Sprite2D" parent="."]
+position = Vector2(16, 2640)
+texture = ExtResource("100_4kyng")
+
+[node name="Wolf" type="Sprite2D" parent="."]
+position = Vector2(16, 2672)
+texture = ExtResource("101_ufb7c")
+
+[node name="WolfSpider" type="Sprite2D" parent="."]
+position = Vector2(16, 2704)
+texture = ExtResource("102_evyog")
+
+[node name="Worm" type="Sprite2D" parent="."]
+position = Vector2(16, 2736)
+texture = ExtResource("103_j6a54")
+
+[node name="Yak" type="Sprite2D" parent="."]
+position = Vector2(16, 2768)
+texture = ExtResource("104_6wmt8")
+
+[node name="YellowWasp" type="Sprite2D" parent="."]
+position = Vector2(16, 2800)
+texture = ExtResource("105_ypyu1")

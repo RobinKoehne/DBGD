@@ -1,0 +1,64 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8flpdvnfs1iv"]
+
+[ext_resource type="Texture2D" uid="uid://bx3kid48hkjdj" path="res://Sprites/dc-dngn/shops/dngn_abandoned_shop.png" id="1_tu821"]
+[ext_resource type="Texture2D" uid="uid://crjj17obdbyav" path="res://Sprites/dc-dngn/shops/dngn_enter_shop.png" id="2_jqj4b"]
+[ext_resource type="Texture2D" uid="uid://cbqgomarn18px" path="res://Sprites/dc-dngn/shops/shop_armour.png" id="3_8tol3"]
+[ext_resource type="Texture2D" uid="uid://cqt4rmvccdp0c" path="res://Sprites/dc-dngn/shops/shop_books.png" id="4_wv4r0"]
+[ext_resource type="Texture2D" uid="uid://cv7ge757kj718" path="res://Sprites/dc-dngn/shops/shop_food.png" id="5_oghrw"]
+[ext_resource type="Texture2D" uid="uid://ln1ra6n6djtg" path="res://Sprites/dc-dngn/shops/shop_general.png" id="6_50asd"]
+[ext_resource type="Texture2D" uid="uid://hkelrntxtl5j" path="res://Sprites/dc-dngn/shops/shop_jewellery.png" id="7_rfpup"]
+[ext_resource type="Texture2D" uid="uid://chga37qimbqe4" path="res://Sprites/dc-dngn/shops/shop_potions.png" id="8_b77bs"]
+[ext_resource type="Texture2D" uid="uid://d3wwiv4lc8ati" path="res://Sprites/dc-dngn/shops/shop_scrolls.png" id="9_e2y0g"]
+[ext_resource type="Texture2D" uid="uid://dm078ct6h8wj2" path="res://Sprites/dc-dngn/shops/shop_wands.png" id="10_08gmv"]
+[ext_resource type="Texture2D" uid="uid://bnn6d1srfqomh" path="res://Sprites/dc-dngn/shops/shop_weapon.png" id="11_gyh61"]
+
+[sub_resource type="TileSet" id="TileSet_wg4fm"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_wg4fm")
+cell_quadrant_size = 32
+format = 2
+
+[node name="DngnAbandonedShop" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_tu821")
+
+[node name="DngnEnterShop" type="Sprite2D" parent="."]
+position = Vector2(48, 16)
+texture = ExtResource("2_jqj4b")
+
+[node name="ShopArmour" type="Sprite2D" parent="."]
+position = Vector2(16, 48)
+texture = ExtResource("3_8tol3")
+
+[node name="ShopBooks" type="Sprite2D" parent="."]
+position = Vector2(48, 48)
+texture = ExtResource("4_wv4r0")
+
+[node name="ShopFood" type="Sprite2D" parent="."]
+position = Vector2(80, 48)
+texture = ExtResource("5_oghrw")
+
+[node name="ShopGeneral" type="Sprite2D" parent="."]
+position = Vector2(16, 80)
+texture = ExtResource("6_50asd")
+
+[node name="ShopJewellery" type="Sprite2D" parent="."]
+position = Vector2(48, 80)
+texture = ExtResource("7_rfpup")
+
+[node name="ShopPotions" type="Sprite2D" parent="."]
+position = Vector2(80, 80)
+texture = ExtResource("8_b77bs")
+
+[node name="ShopScrolls" type="Sprite2D" parent="."]
+position = Vector2(16, 112)
+texture = ExtResource("9_e2y0g")
+
+[node name="ShopWands" type="Sprite2D" parent="."]
+position = Vector2(48, 112)
+texture = ExtResource("10_08gmv")
+
+[node name="ShopWeapon" type="Sprite2D" parent="."]
+position = Vector2(80, 112)
+texture = ExtResource("11_gyh61")

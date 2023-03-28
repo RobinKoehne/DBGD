@@ -1,0 +1,149 @@
+[gd_scene load_steps=30 format=3 uid="uid://bj8w1dccc4m1u"]
+
+[ext_resource type="Texture2D" uid="uid://d3k0yyaq54ysb" path="res://Sprites/dc-dngn/gateways/dngn_enter.png" id="1_cemp6"]
+[ext_resource type="Texture2D" uid="uid://dk3vk6dbfmcbt" path="res://Sprites/dc-dngn/gateways/dngn_enter_abyss.png" id="2_8hcm2"]
+[ext_resource type="Texture2D" uid="uid://dout2w252mteg" path="res://Sprites/dc-dngn/gateways/dngn_enter_cocytus.png" id="3_0oykc"]
+[ext_resource type="Texture2D" uid="uid://dl341oleak6t1" path="res://Sprites/dc-dngn/gateways/dngn_enter_dis.png" id="4_w4swh"]
+[ext_resource type="Texture2D" uid="uid://b6kkqtm442ll3" path="res://Sprites/dc-dngn/gateways/dngn_enter_gehenna.png" id="5_kiayj"]
+[ext_resource type="Texture2D" uid="uid://eesm8f57yuuc" path="res://Sprites/dc-dngn/gateways/dngn_enter_hell.png" id="6_n50x1"]
+[ext_resource type="Texture2D" uid="uid://dsuar73qablja" path="res://Sprites/dc-dngn/gateways/dngn_enter_labyrinth.png" id="7_73ahk"]
+[ext_resource type="Texture2D" uid="uid://bhb61imduy30" path="res://Sprites/dc-dngn/gateways/dngn_enter_pandemonium.png" id="8_5ciyo"]
+[ext_resource type="Texture2D" uid="uid://rw8k38058k7l" path="res://Sprites/dc-dngn/gateways/dngn_enter_tartarus.png" id="9_172dq"]
+[ext_resource type="Texture2D" uid="uid://dvi2bqxrcx376" path="res://Sprites/dc-dngn/gateways/dngn_enter_zot_closed.png" id="10_m53b3"]
+[ext_resource type="Texture2D" uid="uid://dy5g5h3uvikq5" path="res://Sprites/dc-dngn/gateways/dngn_enter_zot_open.png" id="11_0y0rt"]
+[ext_resource type="Texture2D" uid="uid://co4qbisf7rwb2" path="res://Sprites/dc-dngn/gateways/dngn_entrance.png" id="12_ic8gw"]
+[ext_resource type="Texture2D" uid="uid://cqcwidftq73vg" path="res://Sprites/dc-dngn/gateways/dngn_exit_abyss.png" id="13_eiii5"]
+[ext_resource type="Texture2D" uid="uid://cjfru7ypk7n31" path="res://Sprites/dc-dngn/gateways/dngn_exit_abyss_flickering.png" id="14_dhxvb"]
+[ext_resource type="Texture2D" uid="uid://bhh4o8if4ar4x" path="res://Sprites/dc-dngn/gateways/dngn_portal.png" id="15_1ewr5"]
+[ext_resource type="Texture2D" uid="uid://cbetk4wb76f5b" path="res://Sprites/dc-dngn/gateways/dngn_portal_rotated.png" id="16_4hc32"]
+[ext_resource type="Texture2D" uid="uid://8qm1d3llnbab" path="res://Sprites/dc-dngn/gateways/dngn_return.png" id="17_1ws7c"]
+[ext_resource type="Texture2D" uid="uid://c5t5oe4bl1bc7" path="res://Sprites/dc-dngn/gateways/dngn_return_hell.png" id="18_b17rx"]
+[ext_resource type="Texture2D" uid="uid://hjmk3pjtslf" path="res://Sprites/dc-dngn/gateways/dngn_return_zot.png" id="19_41r44"]
+[ext_resource type="Texture2D" uid="uid://bb6y47wj4wgjw" path="res://Sprites/dc-dngn/gateways/dngn_stone_arch.png" id="20_m8jnr"]
+[ext_resource type="Texture2D" uid="uid://cpq0pbyjsg0g1" path="res://Sprites/dc-dngn/gateways/dngn_transit_pandemonium.png" id="21_lk1ux"]
+[ext_resource type="Texture2D" uid="uid://cbkfe854rfid" path="res://Sprites/dc-dngn/gateways/escape_hatch_down.png" id="22_t5pqt"]
+[ext_resource type="Texture2D" uid="uid://bfivxpwvgf16y" path="res://Sprites/dc-dngn/gateways/fleshy_orifice_closed.png" id="23_se82l"]
+[ext_resource type="Texture2D" uid="uid://dy44tyrcviqvr" path="res://Sprites/dc-dngn/gateways/escape_hatch_up.png" id="24_p4rb4"]
+[ext_resource type="Texture2D" uid="uid://dnf7m605xvx3k" path="res://Sprites/dc-dngn/gateways/fleshy_orifice_open.png" id="25_bgt0p"]
+[ext_resource type="Texture2D" uid="uid://seykpogbanjs" path="res://Sprites/dc-dngn/gateways/sewer_portal_rusted.png" id="26_wy4j2"]
+[ext_resource type="Texture2D" uid="uid://ceaul7780iasi" path="res://Sprites/dc-dngn/gateways/stone_stairs_down.png" id="27_lml8a"]
+[ext_resource type="Texture2D" uid="uid://mkqwn2xnxs1i" path="res://Sprites/dc-dngn/gateways/stone_stairs_up.png" id="28_xdnjv"]
+
+[sub_resource type="TileSet" id="TileSet_sl43w"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_sl43w")
+cell_quadrant_size = 32
+format = 2
+
+[node name="DngnEnter" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_cemp6")
+
+[node name="DngnEnterAbyss" type="Sprite2D" parent="."]
+position = Vector2(16, 48)
+texture = ExtResource("2_8hcm2")
+
+[node name="DngnEnterCocytus" type="Sprite2D" parent="."]
+position = Vector2(16, 80)
+texture = ExtResource("3_0oykc")
+
+[node name="DngnEnterDis" type="Sprite2D" parent="."]
+position = Vector2(16, 112)
+texture = ExtResource("4_w4swh")
+
+[node name="DngnEnterGehenna" type="Sprite2D" parent="."]
+position = Vector2(16, 144)
+texture = ExtResource("5_kiayj")
+
+[node name="DngnEnterHell" type="Sprite2D" parent="."]
+position = Vector2(16, 176)
+texture = ExtResource("6_n50x1")
+
+[node name="DngnEnterLabyrinth" type="Sprite2D" parent="."]
+position = Vector2(16, 208)
+texture = ExtResource("7_73ahk")
+
+[node name="DngnEnterPandemonium" type="Sprite2D" parent="."]
+position = Vector2(16, 240)
+texture = ExtResource("8_5ciyo")
+
+[node name="DngnEnterTartarus" type="Sprite2D" parent="."]
+position = Vector2(16, 272)
+texture = ExtResource("9_172dq")
+
+[node name="DngnEnterZotClosed" type="Sprite2D" parent="."]
+position = Vector2(16, 304)
+texture = ExtResource("10_m53b3")
+
+[node name="DngnEnterZotOpen" type="Sprite2D" parent="."]
+position = Vector2(48, 304)
+texture = ExtResource("11_0y0rt")
+
+[node name="DngnEntrance" type="Sprite2D" parent="."]
+position = Vector2(16, 336)
+texture = ExtResource("12_ic8gw")
+
+[node name="DngnExitAbyss" type="Sprite2D" parent="."]
+position = Vector2(16, 368)
+texture = ExtResource("13_eiii5")
+
+[node name="DngnExitAbyssFlickering" type="Sprite2D" parent="."]
+position = Vector2(48, 368)
+texture = ExtResource("14_dhxvb")
+
+[node name="DngnPortal" type="Sprite2D" parent="."]
+position = Vector2(16, 400)
+texture = ExtResource("15_1ewr5")
+
+[node name="DngnPortalRotated" type="Sprite2D" parent="."]
+position = Vector2(48, 400)
+texture = ExtResource("16_4hc32")
+
+[node name="DngnReturn" type="Sprite2D" parent="."]
+position = Vector2(16, 432)
+texture = ExtResource("17_1ws7c")
+
+[node name="DngnReturnHell" type="Sprite2D" parent="."]
+position = Vector2(16, 464)
+texture = ExtResource("18_b17rx")
+
+[node name="DngnReturnZot" type="Sprite2D" parent="."]
+position = Vector2(48, 464)
+texture = ExtResource("19_41r44")
+
+[node name="DngnStoneArch" type="Sprite2D" parent="."]
+position = Vector2(80, 464)
+texture = ExtResource("20_m8jnr")
+
+[node name="DngnTransitPandemonium" type="Sprite2D" parent="."]
+position = Vector2(16, 496)
+texture = ExtResource("21_lk1ux")
+
+[node name="EscapeHatchDown" type="Sprite2D" parent="."]
+position = Vector2(16, 528)
+texture = ExtResource("22_t5pqt")
+
+[node name="FleshyOrificeClosed" type="Sprite2D" parent="."]
+position = Vector2(16, 560)
+texture = ExtResource("23_se82l")
+
+[node name="EscapeHatchUp" type="Sprite2D" parent="."]
+position = Vector2(48, 528)
+texture = ExtResource("24_p4rb4")
+
+[node name="FleshyOrificeOpen" type="Sprite2D" parent="."]
+position = Vector2(48, 560)
+texture = ExtResource("25_bgt0p")
+
+[node name="SewerPortalRusted" type="Sprite2D" parent="."]
+position = Vector2(16, 592)
+texture = ExtResource("26_wy4j2")
+
+[node name="StoneStairsDown" type="Sprite2D" parent="."]
+position = Vector2(16, 624)
+texture = ExtResource("27_lml8a")
+
+[node name="StoneStairsUp" type="Sprite2D" parent="."]
+position = Vector2(48, 624)
+texture = ExtResource("28_xdnjv")

@@ -1,0 +1,554 @@
+[gd_scene load_steps=111 format=3 uid="uid://b5x6w7frppy5h"]
+
+[ext_resource type="Texture2D" uid="uid://bhy2hyybybgyb" path="res://Sprites/dc-dngn/vaults/grate.png" id="1_8dx0s"]
+[ext_resource type="Texture2D" uid="uid://bqvfegx4vbmlq" path="res://Sprites/dc-dngn/vaults/machine_tukima.png" id="2_18l8n"]
+[ext_resource type="Texture2D" uid="uid://detsd53e8iglc" path="res://Sprites/dc-dngn/vaults/the_teleporter_ice_cave.png" id="3_gu2u1"]
+[ext_resource type="Texture2D" uid="uid://bwxeo1770k4p7" path="res://Sprites/dc-dngn/vaults/the_teleporter_vaults.png" id="4_jllos"]
+[ext_resource type="Texture2D" uid="uid://bfq67kilwn6ia" path="res://Sprites/dc-dngn/crumbled_column.png" id="5_hk1u5"]
+[ext_resource type="Texture2D" uid="uid://bhntfmcipvj31" path="res://Sprites/dc-dngn/dngn_blood_fountain2.png" id="6_l4ssj"]
+[ext_resource type="Texture2D" uid="uid://c2g5ago3x6im4" path="res://Sprites/dc-dngn/dngn_blood_fountain.png" id="7_fu57v"]
+[ext_resource type="Texture2D" uid="uid://dp4gqwgklwyg8" path="res://Sprites/dc-dngn/dngn_blue_fountain2.png" id="8_js273"]
+[ext_resource type="Texture2D" uid="uid://brnos36p0mb6j" path="res://Sprites/dc-dngn/dngn_blue_fountain.png" id="9_7splu"]
+[ext_resource type="Texture2D" uid="uid://ncjc85ympkxi" path="res://Sprites/dc-dngn/dngn_closed_door.png" id="10_4sogf"]
+[ext_resource type="Texture2D" uid="uid://p8d4sxsektb6" path="res://Sprites/dc-dngn/dngn_detected_secret_door.png" id="11_3aj4n"]
+[ext_resource type="Texture2D" uid="uid://b7ad7sqdy2g1y" path="res://Sprites/dc-dngn/dngn_dry_fountain.png" id="12_fshd7"]
+[ext_resource type="Texture2D" uid="uid://dvonrlewg5gn6" path="res://Sprites/dc-dngn/dngn_granite_statue.png" id="13_75xyh"]
+[ext_resource type="Texture2D" uid="uid://ijc8854e4c47" path="res://Sprites/dc-dngn/dngn_open_door.png" id="14_lpu6n"]
+[ext_resource type="Texture2D" uid="uid://dx3q48aoaw6rk" path="res://Sprites/dc-dngn/dngn_orcish_idol.png" id="15_cfs7i"]
+[ext_resource type="Texture2D" uid="uid://ds6dod2lcklr6" path="res://Sprites/dc-dngn/dngn_sparkling_fountain2.png" id="16_jteqv"]
+[ext_resource type="Texture2D" uid="uid://gnsqwktescng" path="res://Sprites/dc-dngn/dngn_sparkling_fountain.png" id="17_0oc38"]
+[ext_resource type="Texture2D" uid="uid://laspiob326nq" path="res://Sprites/dc-dngn/dngn_trap_alarm.png" id="18_w3etx"]
+[ext_resource type="Texture2D" uid="uid://byfh0cafoepdo" path="res://Sprites/dc-dngn/dngn_trap_arrow.png" id="19_wte2c"]
+[ext_resource type="Texture2D" uid="uid://bydm1w2m7hs3l" path="res://Sprites/dc-dngn/dngn_trap_axe.png" id="20_x7ko5"]
+[ext_resource type="Texture2D" uid="uid://dyoqeuj14np7r" path="res://Sprites/dc-dngn/dngn_trap_blade.png" id="21_wmpf6"]
+[ext_resource type="Texture2D" uid="uid://evahbnx17ilx" path="res://Sprites/dc-dngn/dngn_trap_bolt.png" id="22_ivynb"]
+[ext_resource type="Texture2D" uid="uid://cofgiqah603rk" path="res://Sprites/dc-dngn/dngn_trap_dart.png" id="23_p0sm4"]
+[ext_resource type="Texture2D" uid="uid://b70hbqb7tjem2" path="res://Sprites/dc-dngn/dngn_trap_needle.png" id="24_df2ab"]
+[ext_resource type="Texture2D" uid="uid://cwi0oiyhlqw73" path="res://Sprites/dc-dngn/dngn_trap_net.png" id="25_r6wgw"]
+[ext_resource type="Texture2D" uid="uid://d3ntm4khg2pla" path="res://Sprites/dc-dngn/dngn_trap_shaft.png" id="26_yfj4c"]
+[ext_resource type="Texture2D" uid="uid://17r2ax6ynybx" path="res://Sprites/dc-dngn/dngn_trap_spear.png" id="27_t6yy6"]
+[ext_resource type="Texture2D" uid="uid://i7wphp4jujyp" path="res://Sprites/dc-dngn/dngn_trap_teleport.png" id="28_xnmkk"]
+[ext_resource type="Texture2D" uid="uid://banq2p870jk7h" path="res://Sprites/dc-dngn/dngn_trap_zot.png" id="29_anc0m"]
+[ext_resource type="Texture2D" uid="uid://dkqiunabc4i5e" path="res://Sprites/dc-dngn/dngn_unseen.png" id="30_svkta"]
+[ext_resource type="Texture2D" uid="uid://dd0lrc8xegsx7" path="res://Sprites/dc-dngn/elephant_statue.png" id="31_g1ecp"]
+[ext_resource type="Texture2D" uid="uid://bojdqjw6cprt6" path="res://Sprites/dc-dngn/gate_closed_left.png" id="32_57osu"]
+[ext_resource type="Texture2D" uid="uid://dhpoj38145iyh" path="res://Sprites/dc-dngn/gate_closed_middle.png" id="33_kub1e"]
+[ext_resource type="Texture2D" uid="uid://liyu5ths7m51" path="res://Sprites/dc-dngn/gate_closed_right.png" id="34_coesi"]
+[ext_resource type="Texture2D" uid="uid://40axclnlbeyu" path="res://Sprites/dc-dngn/gate_open_left.png" id="35_8xigi"]
+[ext_resource type="Texture2D" uid="uid://dfpwiyj5p8e47" path="res://Sprites/dc-dngn/gate_open_middle.png" id="36_nqndb"]
+[ext_resource type="Texture2D" uid="uid://6kedu04a3pcg" path="res://Sprites/dc-dngn/gate_open_right.png" id="37_ib3k7"]
+[ext_resource type="Texture2D" uid="uid://dlqlvxoeyjcgs" path="res://Sprites/dc-dngn/granite_stump.png" id="38_fq8vs"]
+[ext_resource type="Texture2D" uid="uid://drg4gvu5ejfe7" path="res://Sprites/dc-dngn/zot_pillar.png" id="39_f2kwp"]
+[ext_resource type="Texture2D" uid="uid://d14icw7uff4tc" path="res://Sprites/dc-misc/animated_weapon.png" id="40_sw57w"]
+[ext_resource type="Texture2D" uid="uid://csqh4q1pmejbv" path="res://Sprites/dc-misc/blood_green.png" id="41_yg5pp"]
+[ext_resource type="Texture2D" uid="uid://cot7xfpxqdt3d" path="res://Sprites/dc-misc/blood_red1.png" id="42_lkyn2"]
+[ext_resource type="Texture2D" uid="uid://ckcedvbhqk4p1" path="res://Sprites/dc-misc/blood_red2.png" id="43_jxkns"]
+[ext_resource type="Texture2D" uid="uid://lgvahmcj8tyn" path="res://Sprites/dc-misc/blood_red3.png" id="44_xw7j3"]
+[ext_resource type="Texture2D" uid="uid://cfecfx00yv73o" path="res://Sprites/dc-misc/blood_red4.png" id="45_ke8wn"]
+[ext_resource type="Texture2D" uid="uid://dtibtpsgok5qx" path="res://Sprites/dc-misc/blood_red.png" id="46_q4vuo"]
+[ext_resource type="Texture2D" uid="uid://jdx38lgwnlu7" path="res://Sprites/dc-misc/cursor.png" id="47_07v4m"]
+[ext_resource type="Texture2D" uid="uid://c2hkn2430bde2" path="res://Sprites/dc-misc/cursor_green.png" id="48_skdkx"]
+[ext_resource type="Texture2D" uid="uid://bq3mhrw344f4" path="res://Sprites/dc-misc/cursor_red.png" id="49_k6h2d"]
+[ext_resource type="Texture2D" uid="uid://c7m32ht1gue6u" path="res://Sprites/dc-misc/demon_num1.png" id="50_6lfj2"]
+[ext_resource type="Texture2D" uid="uid://ckjxdkt1ql8dc" path="res://Sprites/dc-misc/demon_num2.png" id="51_caavk"]
+[ext_resource type="Texture2D" uid="uid://dpac5thxx2pfg" path="res://Sprites/dc-misc/demon_num3.png" id="52_cs4dw"]
+[ext_resource type="Texture2D" uid="uid://dv5bmkxfft37r" path="res://Sprites/dc-misc/demon_num4.png" id="53_evjhv"]
+[ext_resource type="Texture2D" uid="uid://cwjhmoublve1q" path="res://Sprites/dc-misc/demon_num5.png" id="54_gugqv"]
+[ext_resource type="Texture2D" uid="uid://bw1rduahj6vo5" path="res://Sprites/dc-misc/demon_pentagram1.png" id="55_6xkya"]
+[ext_resource type="Texture2D" uid="uid://nacyekhwsus4" path="res://Sprites/dc-misc/demon_pentagram2.png" id="56_s8m1y"]
+[ext_resource type="Texture2D" uid="uid://hwtljlwm6led" path="res://Sprites/dc-misc/demon_pentagram3.png" id="57_g1bln"]
+[ext_resource type="Texture2D" uid="uid://sqahf4ursej3" path="res://Sprites/dc-misc/demon_pentagram4.png" id="58_xy8n5"]
+[ext_resource type="Texture2D" uid="uid://ct3s24i0622g8" path="res://Sprites/dc-misc/demon_pentagram5.png" id="59_88nas"]
+[ext_resource type="Texture2D" uid="uid://fpeyclxli44s" path="res://Sprites/dc-misc/error.png" id="60_b800o"]
+[ext_resource type="Texture2D" uid="uid://dmcidps64jdv0" path="res://Sprites/dc-misc/flame.png" id="61_r3bkw"]
+[ext_resource type="Texture2D" uid="uid://cjfjigypaqg4h" path="res://Sprites/dc-misc/good_neutral.png" id="62_pc8w0"]
+[ext_resource type="Texture2D" uid="uid://jeok4p6ljfhm" path="res://Sprites/dc-misc/halo.png" id="63_4i273"]
+[ext_resource type="Texture2D" uid="uid://bpcqetf2lbej0" path="res://Sprites/dc-misc/heart.png" id="64_h6smv"]
+[ext_resource type="Texture2D" uid="uid://ca6ocaalgb2f" path="res://Sprites/dc-misc/magicmap.png" id="65_2ne0j"]
+[ext_resource type="Texture2D" uid="uid://b7vi74vm7vwqm" path="res://Sprites/dc-misc/mask_deep_water.png" id="66_g6b77"]
+[ext_resource type="Texture2D" uid="uid://bhy46nsvqykbw" path="res://Sprites/dc-misc/mask_deep_water_murky.png" id="67_xop0p"]
+[ext_resource type="Texture2D" uid="uid://d0drqy0fmdnpj" path="res://Sprites/dc-misc/mask_deep_water_shoals.png" id="68_lpsv5"]
+[ext_resource type="Texture2D" uid="uid://xavp0bkobee8" path="res://Sprites/dc-misc/mask_lava.png" id="69_mpjpw"]
+[ext_resource type="Texture2D" uid="uid://b7k4ianroht6c" path="res://Sprites/dc-misc/mask_shallow_water.png" id="70_00bgh"]
+[ext_resource type="Texture2D" uid="uid://vh5drwvlbo3p" path="res://Sprites/dc-misc/mask_shallow_water_murky.png" id="71_bsn6w"]
+[ext_resource type="Texture2D" uid="uid://dt4som8xc87b2" path="res://Sprites/dc-misc/mask_shallow_water_shoals.png" id="72_asbna"]
+[ext_resource type="Texture2D" uid="uid://c1yr3f4ukmqeo" path="res://Sprites/dc-misc/may_stab_brand.png" id="73_ktjwh"]
+[ext_resource type="Texture2D" uid="uid://41oq0jgx8ir5" path="res://Sprites/dc-misc/mdam_almost_dead.png" id="74_bag12"]
+[ext_resource type="Texture2D" uid="uid://dhxsluavtata1" path="res://Sprites/dc-misc/mdam_heavily_damaged.png" id="75_cky10"]
+[ext_resource type="Texture2D" uid="uid://dtc6amqyevu53" path="res://Sprites/dc-misc/mdam_severely_damaged.png" id="76_r1xwq"]
+[ext_resource type="Texture2D" uid="uid://caxfpe4ccmn6j" path="res://Sprites/dc-misc/neutral.png" id="77_8y8si"]
+[ext_resource type="Texture2D" uid="uid://di0pcwx1ewug1" path="res://Sprites/dc-misc/new_stair.png" id="78_52r1n"]
+[ext_resource type="Texture2D" uid="uid://c0kdp5uh80ro" path="res://Sprites/dc-misc/num0.png" id="79_es164"]
+[ext_resource type="Texture2D" uid="uid://vmpxqxtkglnc" path="res://Sprites/dc-misc/num1.png" id="80_3wa3m"]
+[ext_resource type="Texture2D" uid="uid://c2qu01g6gd50b" path="res://Sprites/dc-misc/num2.png" id="81_mdjw2"]
+[ext_resource type="Texture2D" uid="uid://bthlkynogmibo" path="res://Sprites/dc-misc/num4.png" id="82_pw6ax"]
+[ext_resource type="Texture2D" uid="uid://d31y5upc50tbj" path="res://Sprites/dc-misc/num3.png" id="83_6wwl7"]
+[ext_resource type="Texture2D" uid="uid://bacs1t0vpnjj5" path="res://Sprites/dc-misc/num5.png" id="84_pxx58"]
+[ext_resource type="Texture2D" uid="uid://d07w6mb16pcpn" path="res://Sprites/dc-misc/num6.png" id="85_0l1c2"]
+[ext_resource type="Texture2D" uid="uid://ba1hamq8k8bev" path="res://Sprites/dc-misc/num7.png" id="86_b3efp"]
+[ext_resource type="Texture2D" uid="uid://b0giq4nti4nk7" path="res://Sprites/dc-misc/num8.png" id="87_q18bq"]
+[ext_resource type="Texture2D" uid="uid://cue5wriouqsjw" path="res://Sprites/dc-misc/num9.png" id="88_qfwvw"]
+[ext_resource type="Texture2D" uid="uid://dbv7fdbfxd4qw" path="res://Sprites/dc-misc/out_of_range.png" id="89_oq7ok"]
+[ext_resource type="Texture2D" uid="uid://cgmw8x4axboq1" path="res://Sprites/dc-misc/out_of_sight.png" id="90_i7xsp"]
+[ext_resource type="Texture2D" uid="uid://bjxlchhc0kv04" path="res://Sprites/dc-misc/poison.png" id="91_fw2la"]
+[ext_resource type="Texture2D" uid="uid://c2ubw4fvwb1c4" path="res://Sprites/dc-misc/ray.png" id="92_s0x3x"]
+[ext_resource type="Texture2D" uid="uid://bcwtw7fwvih8h" path="res://Sprites/dc-misc/ray_out_of_range.png" id="93_lcqji"]
+[ext_resource type="Texture2D" uid="uid://d1kemsoeqo344" path="res://Sprites/dc-misc/slot.png" id="94_7pove"]
+[ext_resource type="Texture2D" uid="uid://csg7d3b8n3nj1" path="res://Sprites/dc-misc/slot_cursed.png" id="95_8fldo"]
+[ext_resource type="Texture2D" uid="uid://b3t0fkfwefj7y" path="res://Sprites/dc-misc/slot_eq.png" id="96_e5ytx"]
+[ext_resource type="Texture2D" uid="uid://dv083xvovy4ux" path="res://Sprites/dc-misc/slot_eq_cursed.png" id="97_r7635"]
+[ext_resource type="Texture2D" uid="uid://bewjxccwmvfgs" path="res://Sprites/dc-misc/something_under.png" id="98_4nrri"]
+[ext_resource type="Texture2D" uid="uid://5fvt1e7ninlh" path="res://Sprites/dc-misc/stab_brand.png" id="99_n0a8d"]
+[ext_resource type="Texture2D" uid="uid://cybumicbr0i8l" path="res://Sprites/dc-misc/todo.png" id="100_4dgt7"]
+[ext_resource type="Texture2D" uid="uid://bqfj6fivgn2ug" path="res://Sprites/dc-misc/travel_exclusion.png" id="101_i3men"]
+[ext_resource type="Texture2D" uid="uid://i0nirqr5hhdl" path="res://Sprites/dc-misc/travel_exclusion_centre.png" id="102_7pwux"]
+[ext_resource type="Texture2D" uid="uid://bkpq537kg2h1x" path="res://Sprites/dc-misc/tried.png" id="103_vbk2p"]
+[ext_resource type="Texture2D" uid="uid://cr3n00omip6a2" path="res://Sprites/dc-misc/tutorial_cursor.png" id="104_j6dtu"]
+[ext_resource type="Texture2D" uid="uid://bclu5w6pkcbu0" path="res://Sprites/dc-misc/unseen.png" id="105_arj1f"]
+[ext_resource type="Texture2D" uid="uid://bmnm31cybt8n3" path="res://Sprites/dc-misc/unseen_armour.png" id="106_pmbyg"]
+[ext_resource type="Texture2D" uid="uid://dor342pdcdm4v" path="res://Sprites/dc-misc/unseen_item.png" id="107_qqrne"]
+[ext_resource type="Texture2D" uid="uid://bh3vkg75kcvm6" path="res://Sprites/dc-misc/unseen_monster.png" id="108_dfxoj"]
+[ext_resource type="Texture2D" uid="uid://cwm8esg5il3nf" path="res://Sprites/dc-misc/unseen_weapon.png" id="109_6jh0s"]
+
+[sub_resource type="TileSet" id="TileSet_a4bk0"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_a4bk0")
+cell_quadrant_size = 32
+format = 2
+
+[node name="Grate" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_8dx0s")
+
+[node name="MachineTukima" type="Sprite2D" parent="."]
+position = Vector2(48, 16)
+texture = ExtResource("2_18l8n")
+
+[node name="TheTeleporterIceCave" type="Sprite2D" parent="."]
+position = Vector2(80, 16)
+texture = ExtResource("3_gu2u1")
+
+[node name="TheTeleporterVaults" type="Sprite2D" parent="."]
+position = Vector2(112, 16)
+texture = ExtResource("4_jllos")
+
+[node name="CrumbledColumn" type="Sprite2D" parent="."]
+position = Vector2(16, 48)
+texture = ExtResource("5_hk1u5")
+
+[node name="DngnBloodFountain2" type="Sprite2D" parent="."]
+position = Vector2(16, 80)
+texture = ExtResource("6_l4ssj")
+
+[node name="DngnBloodFountain" type="Sprite2D" parent="."]
+position = Vector2(48, 80)
+texture = ExtResource("7_fu57v")
+
+[node name="DngnBlueFountain2" type="Sprite2D" parent="."]
+position = Vector2(16, 112)
+texture = ExtResource("8_js273")
+
+[node name="DngnBlueFountain" type="Sprite2D" parent="."]
+position = Vector2(48, 112)
+texture = ExtResource("9_7splu")
+
+[node name="DngnClosedDoor" type="Sprite2D" parent="."]
+position = Vector2(16, 144)
+texture = ExtResource("10_4sogf")
+
+[node name="DngnDetectedSecretDoor" type="Sprite2D" parent="."]
+position = Vector2(48, 144)
+texture = ExtResource("11_3aj4n")
+
+[node name="DngnDryFountain" type="Sprite2D" parent="."]
+position = Vector2(16, 176)
+texture = ExtResource("12_fshd7")
+
+[node name="DngnGraniteStatue" type="Sprite2D" parent="."]
+position = Vector2(16, 208)
+texture = ExtResource("13_75xyh")
+
+[node name="DngnOpenDoor" type="Sprite2D" parent="."]
+position = Vector2(16, 240)
+texture = ExtResource("14_lpu6n")
+
+[node name="DngnOrcishIdol" type="Sprite2D" parent="."]
+position = Vector2(16, 272)
+texture = ExtResource("15_cfs7i")
+
+[node name="DngnSparklingFountain2" type="Sprite2D" parent="."]
+position = Vector2(16, 304)
+texture = ExtResource("16_jteqv")
+
+[node name="DngnSparklingFountain" type="Sprite2D" parent="."]
+position = Vector2(48, 304)
+texture = ExtResource("17_0oc38")
+
+[node name="DngnTrapAlarm" type="Sprite2D" parent="."]
+position = Vector2(16, 336)
+texture = ExtResource("18_w3etx")
+
+[node name="DngnTrapArrow" type="Sprite2D" parent="."]
+position = Vector2(48, 336)
+texture = ExtResource("19_wte2c")
+
+[node name="DngnTrapAxe" type="Sprite2D" parent="."]
+position = Vector2(80, 336)
+texture = ExtResource("20_x7ko5")
+
+[node name="DngnTrapBlade" type="Sprite2D" parent="."]
+position = Vector2(112, 336)
+texture = ExtResource("21_wmpf6")
+
+[node name="DngnTrapBolt" type="Sprite2D" parent="."]
+position = Vector2(144, 336)
+texture = ExtResource("22_ivynb")
+
+[node name="DngnTrapDart" type="Sprite2D" parent="."]
+position = Vector2(176, 336)
+texture = ExtResource("23_p0sm4")
+
+[node name="DngnTrapNeedle" type="Sprite2D" parent="."]
+position = Vector2(208, 336)
+texture = ExtResource("24_df2ab")
+
+[node name="DngnTrapNet" type="Sprite2D" parent="."]
+position = Vector2(240, 336)
+texture = ExtResource("25_r6wgw")
+
+[node name="DngnTrapShaft" type="Sprite2D" parent="."]
+position = Vector2(272, 336)
+texture = ExtResource("26_yfj4c")
+
+[node name="DngnTrapSpear" type="Sprite2D" parent="."]
+position = Vector2(304, 336)
+texture = ExtResource("27_t6yy6")
+
+[node name="DngnTrapTeleport" type="Sprite2D" parent="."]
+position = Vector2(336, 336)
+texture = ExtResource("28_xnmkk")
+
+[node name="DngnTrapZot" type="Sprite2D" parent="."]
+position = Vector2(368, 336)
+texture = ExtResource("29_anc0m")
+
+[node name="DngnUnseen" type="Sprite2D" parent="."]
+position = Vector2(16, 368)
+texture = ExtResource("30_svkta")
+
+[node name="ElephantStatue" type="Sprite2D" parent="."]
+position = Vector2(16, 400)
+texture = ExtResource("31_g1ecp")
+
+[node name="GateClosedLeft" type="Sprite2D" parent="."]
+position = Vector2(16, 432)
+texture = ExtResource("32_57osu")
+
+[node name="GateClosedMiddle" type="Sprite2D" parent="."]
+position = Vector2(48, 432)
+texture = ExtResource("33_kub1e")
+
+[node name="GateClosedRight" type="Sprite2D" parent="."]
+position = Vector2(80, 432)
+texture = ExtResource("34_coesi")
+
+[node name="GateOpenLeft" type="Sprite2D" parent="."]
+position = Vector2(16, 464)
+texture = ExtResource("35_8xigi")
+
+[node name="GateOpenMiddle" type="Sprite2D" parent="."]
+position = Vector2(48, 464)
+texture = ExtResource("36_nqndb")
+
+[node name="GateOpenRight" type="Sprite2D" parent="."]
+position = Vector2(80, 464)
+texture = ExtResource("37_ib3k7")
+
+[node name="GraniteStump" type="Sprite2D" parent="."]
+position = Vector2(16, 496)
+texture = ExtResource("38_fq8vs")
+
+[node name="ZotPillar" type="Sprite2D" parent="."]
+position = Vector2(48, 496)
+texture = ExtResource("39_f2kwp")
+
+[node name="AnimatedWeapon" type="Sprite2D" parent="."]
+position = Vector2(16, 528)
+texture = ExtResource("40_sw57w")
+
+[node name="BloodGreen" type="Sprite2D" parent="."]
+position = Vector2(16, 560)
+texture = ExtResource("41_yg5pp")
+
+[node name="BloodRed1" type="Sprite2D" parent="."]
+position = Vector2(16, 592)
+texture = ExtResource("42_lkyn2")
+
+[node name="BloodRed2" type="Sprite2D" parent="."]
+position = Vector2(48, 592)
+texture = ExtResource("43_jxkns")
+
+[node name="BloodRed3" type="Sprite2D" parent="."]
+position = Vector2(80, 592)
+texture = ExtResource("44_xw7j3")
+
+[node name="BloodRed4" type="Sprite2D" parent="."]
+position = Vector2(112, 592)
+texture = ExtResource("45_ke8wn")
+
+[node name="BloodRed" type="Sprite2D" parent="."]
+position = Vector2(144, 592)
+texture = ExtResource("46_q4vuo")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+position = Vector2(16, 624)
+texture = ExtResource("47_07v4m")
+
+[node name="CursorGreen" type="Sprite2D" parent="."]
+position = Vector2(48, 624)
+texture = ExtResource("48_skdkx")
+
+[node name="CursorRed" type="Sprite2D" parent="."]
+position = Vector2(80, 624)
+texture = ExtResource("49_k6h2d")
+
+[node name="DemonNum1" type="Sprite2D" parent="."]
+position = Vector2(16, 656)
+texture = ExtResource("50_6lfj2")
+
+[node name="DemonNum2" type="Sprite2D" parent="."]
+position = Vector2(48, 656)
+texture = ExtResource("51_caavk")
+
+[node name="DemonNum3" type="Sprite2D" parent="."]
+position = Vector2(80, 656)
+texture = ExtResource("52_cs4dw")
+
+[node name="DemonNum4" type="Sprite2D" parent="."]
+position = Vector2(112, 656)
+texture = ExtResource("53_evjhv")
+
+[node name="DemonNum5" type="Sprite2D" parent="."]
+position = Vector2(144, 656)
+texture = ExtResource("54_gugqv")
+
+[node name="DemonPentagram1" type="Sprite2D" parent="."]
+position = Vector2(16, 688)
+texture = ExtResource("55_6xkya")
+
+[node name="DemonPentagram2" type="Sprite2D" parent="."]
+position = Vector2(48, 688)
+texture = ExtResource("56_s8m1y")
+
+[node name="DemonPentagram3" type="Sprite2D" parent="."]
+position = Vector2(80, 688)
+texture = ExtResource("57_g1bln")
+
+[node name="DemonPentagram4" type="Sprite2D" parent="."]
+position = Vector2(112, 688)
+texture = ExtResource("58_xy8n5")
+
+[node name="DemonPentagram5" type="Sprite2D" parent="."]
+position = Vector2(144, 688)
+texture = ExtResource("59_88nas")
+
+[node name="Error" type="Sprite2D" parent="."]
+position = Vector2(16, 720)
+texture = ExtResource("60_b800o")
+
+[node name="Flame" type="Sprite2D" parent="."]
+position = Vector2(48, 720)
+texture = ExtResource("61_r3bkw")
+
+[node name="GoodNeutral" type="Sprite2D" parent="."]
+position = Vector2(80, 720)
+texture = ExtResource("62_pc8w0")
+
+[node name="Halo" type="Sprite2D" parent="."]
+position = Vector2(16, 752)
+texture = ExtResource("63_4i273")
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(16, 784)
+texture = ExtResource("64_h6smv")
+
+[node name="Magicmap" type="Sprite2D" parent="."]
+position = Vector2(16, 816)
+texture = ExtResource("65_2ne0j")
+
+[node name="MaskDeepWater" type="Sprite2D" parent="."]
+position = Vector2(16, 848)
+texture = ExtResource("66_g6b77")
+
+[node name="MaskDeepWaterMurky" type="Sprite2D" parent="."]
+position = Vector2(48, 848)
+texture = ExtResource("67_xop0p")
+
+[node name="MaskDeepWaterShoals" type="Sprite2D" parent="."]
+position = Vector2(80, 848)
+texture = ExtResource("68_lpsv5")
+
+[node name="MaskLava" type="Sprite2D" parent="."]
+position = Vector2(112, 848)
+texture = ExtResource("69_mpjpw")
+
+[node name="MaskShallowWater" type="Sprite2D" parent="."]
+position = Vector2(144, 848)
+texture = ExtResource("70_00bgh")
+
+[node name="MaskShallowWaterMurky" type="Sprite2D" parent="."]
+position = Vector2(176, 848)
+texture = ExtResource("71_bsn6w")
+
+[node name="MaskShallowWaterShoals" type="Sprite2D" parent="."]
+position = Vector2(208, 848)
+texture = ExtResource("72_asbna")
+
+[node name="MayStabBrand" type="Sprite2D" parent="."]
+position = Vector2(16, 880)
+texture = ExtResource("73_ktjwh")
+
+[node name="MdamAlmostDead" type="Sprite2D" parent="."]
+position = Vector2(48, 880)
+texture = ExtResource("74_bag12")
+
+[node name="MdamHeavilyDamaged" type="Sprite2D" parent="."]
+position = Vector2(80, 880)
+texture = ExtResource("75_cky10")
+
+[node name="MdamSeverelyDamaged" type="Sprite2D" parent="."]
+position = Vector2(112, 880)
+texture = ExtResource("76_r1xwq")
+
+[node name="Neutral" type="Sprite2D" parent="."]
+position = Vector2(144, 880)
+texture = ExtResource("77_8y8si")
+
+[node name="NewStair" type="Sprite2D" parent="."]
+position = Vector2(176, 880)
+texture = ExtResource("78_52r1n")
+
+[node name="Num0" type="Sprite2D" parent="."]
+position = Vector2(16, 912)
+texture = ExtResource("79_es164")
+
+[node name="Num1" type="Sprite2D" parent="."]
+position = Vector2(48, 912)
+texture = ExtResource("80_3wa3m")
+
+[node name="Num2" type="Sprite2D" parent="."]
+position = Vector2(80, 912)
+texture = ExtResource("81_mdjw2")
+
+[node name="Num4" type="Sprite2D" parent="."]
+position = Vector2(144, 912)
+texture = ExtResource("82_pw6ax")
+
+[node name="Num3" type="Sprite2D" parent="."]
+position = Vector2(112, 912)
+texture = ExtResource("83_6wwl7")
+
+[node name="Num5" type="Sprite2D" parent="."]
+position = Vector2(176, 912)
+texture = ExtResource("84_pxx58")
+
+[node name="Num6" type="Sprite2D" parent="."]
+position = Vector2(208, 912)
+texture = ExtResource("85_0l1c2")
+
+[node name="Num7" type="Sprite2D" parent="."]
+position = Vector2(240, 912)
+texture = ExtResource("86_b3efp")
+
+[node name="Num8" type="Sprite2D" parent="."]
+position = Vector2(272, 912)
+texture = ExtResource("87_q18bq")
+
+[node name="Num9" type="Sprite2D" parent="."]
+position = Vector2(304, 912)
+texture = ExtResource("88_qfwvw")
+
+[node name="OutOfRange" type="Sprite2D" parent="."]
+position = Vector2(16, 944)
+texture = ExtResource("89_oq7ok")
+
+[node name="OutOfSight" type="Sprite2D" parent="."]
+position = Vector2(48, 944)
+texture = ExtResource("90_i7xsp")
+
+[node name="Poison" type="Sprite2D" parent="."]
+position = Vector2(16, 976)
+texture = ExtResource("91_fw2la")
+
+[node name="Ray" type="Sprite2D" parent="."]
+position = Vector2(16, 1008)
+texture = ExtResource("92_s0x3x")
+
+[node name="RayOutOfRange" type="Sprite2D" parent="."]
+position = Vector2(48, 1008)
+texture = ExtResource("93_lcqji")
+
+[node name="Slot" type="Sprite2D" parent="."]
+position = Vector2(16, 1040)
+texture = ExtResource("94_7pove")
+
+[node name="SlotCursed" type="Sprite2D" parent="."]
+position = Vector2(48, 1040)
+texture = ExtResource("95_8fldo")
+
+[node name="SlotEq" type="Sprite2D" parent="."]
+position = Vector2(80, 1040)
+texture = ExtResource("96_e5ytx")
+
+[node name="SlotEqCursed" type="Sprite2D" parent="."]
+position = Vector2(112, 1040)
+texture = ExtResource("97_r7635")
+
+[node name="SomethingUnder" type="Sprite2D" parent="."]
+position = Vector2(144, 1040)
+texture = ExtResource("98_4nrri")
+
+[node name="StabBrand" type="Sprite2D" parent="."]
+position = Vector2(176, 1040)
+texture = ExtResource("99_n0a8d")
+
+[node name="Todo" type="Sprite2D" parent="."]
+position = Vector2(224, 1040)
+texture = ExtResource("100_4dgt7")
+
+[node name="TravelExclusion" type="Sprite2D" parent="."]
+position = Vector2(272, 1040)
+texture = ExtResource("101_i3men")
+
+[node name="TravelExclusionCentre" type="Sprite2D" parent="."]
+position = Vector2(304, 1040)
+texture = ExtResource("102_7pwux")
+
+[node name="Tried" type="Sprite2D" parent="."]
+position = Vector2(336, 1040)
+texture = ExtResource("103_vbk2p")
+
+[node name="TutorialCursor" type="Sprite2D" parent="."]
+position = Vector2(368, 1040)
+texture = ExtResource("104_j6dtu")
+
+[node name="Unseen" type="Sprite2D" parent="."]
+position = Vector2(16, 1072)
+texture = ExtResource("105_arj1f")
+
+[node name="UnseenArmour" type="Sprite2D" parent="."]
+position = Vector2(48, 1072)
+texture = ExtResource("106_pmbyg")
+
+[node name="UnseenItem" type="Sprite2D" parent="."]
+position = Vector2(80, 1072)
+texture = ExtResource("107_qqrne")
+
+[node name="UnseenMonster" type="Sprite2D" parent="."]
+position = Vector2(112, 1072)
+texture = ExtResource("108_dfxoj")
+
+[node name="UnseenWeapon" type="Sprite2D" parent="."]
+position = Vector2(144, 1072)
+texture = ExtResource("109_6jh0s")
