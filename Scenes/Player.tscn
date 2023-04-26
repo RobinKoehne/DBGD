@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxfyjo7mkedeq"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_5rehj"]
+[ext_resource type="Texture2D" uid="uid://d0kfy23yp1tdx" path="res://Sprites/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" id="2_5fmsb"]
+
+[sub_resource type="Animation" id="Animation_no018"]
+resource_name = "Stand"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [40, 41, 42, 43]
+}
+
+[sub_resource type="Animation" id="Animation_e52rt"]
+resource_name = "Walk"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [44, 45, 46, 47]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4tfb0"]
+_data = {
+"Stand": SubResource("Animation_no018"),
+"Walk": SubResource("Animation_e52rt")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wdf7"]
+size = Vector2(52.5, 54)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_5rehj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4tfb0")
+}
+
+[node name="Player" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_5fmsb")
+hframes = 32
+vframes = 32
+frame = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_0wdf7")
