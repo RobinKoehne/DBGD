@@ -4773,7 +4773,6 @@ position = Vector2(0, -4)
 
 [node name="SwordHitbox" parent="Player/PivotHitbox" instance=ExtResource("6_s5wqx")]
 position = Vector2(70, 0)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" parent="Player/PivotHitbox/SwordHitbox" index="0"]
 shape = SubResource("CapsuleShape2D_g7d8w")
