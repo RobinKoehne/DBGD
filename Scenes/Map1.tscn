@@ -378,11 +378,6 @@ sources/2 = SubResource("TileSetAtlasSource_meu5c")
 position = Vector2(1, 0)
 script = ExtResource("1_ju6l0")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1164.0
-offset_bottom = 669.0
-color = Color(0.329412, 0.329412, 0.329412, 1)
-
 [node name="Map1" type="Sprite2D" parent="."]
 
 [node name="Level" type="TileMap" parent="."]
@@ -401,5 +396,7 @@ shape = SubResource("RectangleShape2D_w7bvk")
 
 [node name="Player" parent="." instance=ExtResource("5_ra2ln")]
 position = Vector2(52, 426)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
