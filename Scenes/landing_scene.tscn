@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://fkpri06ji6nk"]
+[gd_scene load_steps=19 format=3 uid="uid://fkpri06ji6nk"]
 
 [ext_resource type="Texture2D" uid="uid://dpivus65kitit" path="res://Sprites/dc-dngn/Tilesets/spritesheet.png" id="1_nvyon"]
 [ext_resource type="Texture2D" uid="uid://8ah56hx0q7us" path="res://Sprites/dc-dngn/Tilesets/walls.png" id="2_so56i"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d22q3krv2mv8r" path="res://Scenes/Player.tscn" id="5_kqiqn"]
 [ext_resource type="PackedScene" uid="uid://c7fgwktel6i43" path="res://Scenes/hitbox.tscn" id="6_s5wqx"]
 [ext_resource type="PackedScene" uid="uid://bg3ttel3hq2u3" path="res://Scenes/enemy_1.tscn" id="6_wnpyw"]
+[ext_resource type="Script" path="res://Scenes/change_Scenes.gd" id="8_ssad7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0bmd"]
 texture = ExtResource("1_nvyon")
@@ -4728,6 +4729,8 @@ sources/0 = SubResource("TileSetAtlasSource_7eeff")
 radius = 32.5
 height = 70.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vqti"]
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(1, 1)
 
@@ -4786,5 +4789,16 @@ position_smoothing_speed = 1.0
 
 [node name="AnimatedEnemy1" parent="." instance=ExtResource("6_wnpyw")]
 position = Vector2(176, -130)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("8_ssad7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-15, -204)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_8vqti")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 
 [editable path="Player/PivotHitbox/SwordHitbox"]

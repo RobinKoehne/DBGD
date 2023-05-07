@@ -28,3 +28,4 @@ func _physics_process(delta):
 		$Player.flip_h = 1
 		$AnimationPlayer.play("Stand")
 
+
