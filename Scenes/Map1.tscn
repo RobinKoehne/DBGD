@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://crgk5dpurrmv0"]
+[gd_scene load_steps=17 format=3 uid="uid://crgk5dpurrmv0"]
 
 [ext_resource type="Script" path="res://Map1.gd" id="1_ju6l0"]
 [ext_resource type="Texture2D" uid="uid://boitmhs8phwlm" path="res://TileSets/Floor.png" id="2_lep1b"]
 [ext_resource type="Texture2D" uid="uid://bp1pyex3a3rtd" path="res://TileSets/Walls.png" id="3_for7q"]
 [ext_resource type="Script" path="res://Scenes/Area2D2.gd" id="4_5ctgo"]
 [ext_resource type="PackedScene" uid="uid://d22q3krv2mv8r" path="res://Scenes/Player.tscn" id="5_ra2ln"]
+[ext_resource type="Texture2D" uid="uid://c4mn0og514w3v" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/chest_full_open_anim_f0.png" id="6_13mus"]
+[ext_resource type="Texture2D" uid="uid://rixdldiebb2j" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/chest_full_open_anim_f1.png" id="7_iwg2n"]
+[ext_resource type="Texture2D" uid="uid://bdxv1hhmb6hd7" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/chest_full_open_anim_f2.png" id="8_rkmit"]
+[ext_resource type="Script" path="res://Scripts/Chest.gd" id="9_a17mf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e3ai"]
 texture = ExtResource("2_lep1b")
@@ -1263,6 +1267,29 @@ sources/2 = SubResource("TileSetAtlasSource_meu5c")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7bvk"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tiaqm"]
+size = Vector2(14.75, 12.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_efygk"]
+radius = 20.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jvbdg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_13mus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iwg2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rkmit")
+}],
+"loop": false,
+"name": &"open",
+"speed": 10.0
+}]
+
 [node name="Map1" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_ju6l0")
@@ -1286,10 +1313,29 @@ scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_w7bvk")
 
 [node name="Player" parent="." instance=ExtResource("5_ra2ln")]
-position = Vector2(45, 652)
+position = Vector2(1288, 1791)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1294, 1841)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1289, 1921)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_tiaqm")
+
+[node name="OpenArea" type="Area2D" parent="StaticBody2D"]
+scale = Vector2(4, 4)
+script = ExtResource("9_a17mf")
+
+[node name="OpenCollider" type="CollisionShape2D" parent="StaticBody2D/OpenArea"]
+shape = SubResource("CircleShape2D_efygk")
+debug_color = Color(0.529412, 0.572549, 0, 0.419608)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/OpenArea"]
+sprite_frames = SubResource("SpriteFrames_jvbdg")
+animation = &"open"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
