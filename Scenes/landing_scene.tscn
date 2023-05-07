@@ -4748,6 +4748,7 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Walls" type="TileMap" parent="."]
+visible = false
 tile_set = SubResource("TileSet_p2e1t")
 format = 2
 layer_0/name = "Ground"
