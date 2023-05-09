@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://jtppxnr8u2gb"]
+
+[ext_resource type="Script" path="res://Scripts/sword.gd" id="1_0kums"]
+[ext_resource type="Texture2D" uid="uid://d0kfy23yp1tdx" path="res://Sprites/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" id="2_2gl87"]
+[ext_resource type="PackedScene" uid="uid://c7fgwktel6i43" path="res://Scenes/hitbox.tscn" id="3_myq1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ejjg"]
+size = Vector2(12, 18)
+
+[node name="Sword" type="Node2D"]
+position = Vector2(22, 0)
+rotation = 1.5708
+script = ExtResource("1_0kums")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_2gl87")
+hframes = 32
+vframes = 32
+frame = 50
+
+[node name="Hitbox" parent="." instance=ExtResource("3_myq1u")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_1ejjg")
+
+[editable path="Hitbox"]

@@ -1,61 +1,106 @@
-[gd_scene load_steps=9 format=3 uid="uid://bg3ttel3hq2u3"]
+[gd_scene load_steps=11 format=3 uid="uid://bg3ttel3hq2u3"]
 
-[ext_resource type="Texture2D" uid="uid://bwpcaaxwgup82" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/goblin_idle_anim_f0.png" id="1_7h7lv"]
-[ext_resource type="Script" path="res://Scenes/enemy_1.gd" id="1_sy2h5"]
-[ext_resource type="Texture2D" uid="uid://c2d2xkld5h4dl" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/goblin_idle_anim_f1.png" id="2_osy22"]
-[ext_resource type="Texture2D" uid="uid://dtsxqtbjvngc7" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/goblin_idle_anim_f2.png" id="3_fg1p3"]
-[ext_resource type="PackedScene" uid="uid://gb0iqodueojd" path="res://Scenes/hurtbox.tscn" id="5_ig4c0"]
+[ext_resource type="Script" path="res://Scripts/enemy_1.gd" id="1_dhrmf"]
+[ext_resource type="Texture2D" uid="uid://d0kfy23yp1tdx" path="res://Sprites/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" id="1_eauu2"]
+[ext_resource type="PackedScene" uid="uid://gb0iqodueojd" path="res://Scenes/hurtbox.tscn" id="3_8gwax"]
+[ext_resource type="PackedScene" uid="uid://c7fgwktel6i43" path="res://Scenes/hitbox.tscn" id="4_g2byb"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_m2ogv"]
-resource_local_to_scene = true
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_7h7lv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_osy22")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_fg1p3")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_o3xpe"]
+resource_name = "Stand"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [55, 56, 57, 58]
+}
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_12sri"]
-size = Vector2(37, 38)
+[sub_resource type="Animation" id="Animation_uua0d"]
+resource_name = "Walk"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enemy1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [59, 60, 61, 62]
+}
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r4la"]
-size = Vector2(37, 38)
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l61a0"]
+_data = {
+"Stand": SubResource("Animation_o3xpe"),
+"Walk": SubResource("Animation_uua0d")
+}
 
-[node name="AnimatedEnemy1" type="CharacterBody2D"]
-script = ExtResource("1_sy2h5")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o00vh"]
+size = Vector2(10.5, 11.5)
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nq5ke"]
+size = Vector2(14, 14)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6xx84"]
+radius = 4.0
+height = 14.0
+
+[node name="Enemy1" type="CharacterBody2D"]
+position = Vector2(-1, -10)
+script = ExtResource("1_dhrmf")
+
+[node name="Enemy1" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_m2ogv")
-animation = &"Idle"
-frame_progress = 0.133692
-centered = false
-flip_h = true
+scale = Vector2(2, 2)
+texture = ExtResource("1_eauu2")
+hframes = 32
+vframes = 32
+frame = 55
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l61a0")
+}
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_8gwax")]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0.75, 2.75)
+shape = SubResource("RectangleShape2D_o00vh")
+
+[node name="Hitbox" parent="." instance=ExtResource("4_g2byb")]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_nq5ke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(21.5, 33)
-shape = SubResource("RectangleShape2D_12sri")
+position = Vector2(1, 10)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6xx84")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="Hurtbox" parent="." instance=ExtResource("5_ig4c0")]
-
-[node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(21.5, 33)
-shape = SubResource("RectangleShape2D_8r4la")
-
+[connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
+[editable path="Hitbox"]
