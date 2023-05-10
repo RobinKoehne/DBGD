@@ -1313,9 +1313,6 @@ shape = SubResource("RectangleShape2D_w7bvk")
 [node name="Player" parent="." instance=ExtResource("5_ra2ln")]
 position = Vector2(41, 649)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(40, 655)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1289, 1921)
 

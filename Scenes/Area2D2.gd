@@ -10,6 +10,6 @@ func _on_body_exited(body):
 	
 func _process(delta):
 	if entered == true:
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("switch_scene"):
 			StageManager.changeState(StageManager.main)
 

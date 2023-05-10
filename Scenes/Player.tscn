@@ -8,6 +8,7 @@
 [sub_resource type="Animation" id="Animation_l80rv"]
 resource_name = "Attack"
 length = 0.4
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -238,7 +239,7 @@ position = Vector2(22, 7)
 
 [node name="Player" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -2)
+position = Vector2(0, 2)
 scale = Vector2(2, 2)
 texture = ExtResource("2_5fmsb")
 hframes = 32
@@ -257,6 +258,14 @@ shape = SubResource("RectangleShape2D_im6qb")
 position = Vector2(0, 8)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_x5bpc")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.2, 2.2)
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
 
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
 

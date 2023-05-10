@@ -13,7 +13,7 @@ const FRICTION = 2000
 enum {MOVE, ATTACK, HIT}
 
 var state = MOVE
-var health = 6
+var health
 var old_velocity = Vector2.ZERO
 
 func _ready():
