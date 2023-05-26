@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bn5colfcrdnbc"]
+[gd_scene load_steps=14 format=3 uid="uid://bn5colfcrdnbc"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_iqm5c"]
 [ext_resource type="Texture2D" uid="uid://d0kfy23yp1tdx" path="res://Sprites/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" id="2_5fmsb"]
 [ext_resource type="PackedScene" uid="uid://jtppxnr8u2gb" path="res://Scenes/sword.tscn" id="3_mfed4"]
 [ext_resource type="PackedScene" uid="uid://gb0iqodueojd" path="res://Scenes/hurtbox.tscn" id="4_fw2d2"]
+[ext_resource type="PackedScene" uid="uid://o3xsbk5fl8xe" path="res://Scenes/health_ui.tscn" id="5_db656"]
+[ext_resource type="PackedScene" uid="uid://bvv6wfbhlqqvi" path="res://Scenes/player_stats.tscn" id="5_gh8yr"]
 
 [sub_resource type="Animation" id="Animation_l80rv"]
 resource_name = "Attack"
@@ -237,6 +239,9 @@ libraries = {
 [node name="Sword" parent="." instance=ExtResource("3_mfed4")]
 position = Vector2(22, 7)
 
+[node name="Stats" parent="Sword" index="2"]
+damage = 10
+
 [node name="Player" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 2)
@@ -259,8 +264,15 @@ position = Vector2(0, 8)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_x5bpc")
 
+[node name="PlayerStats" parent="." instance=ExtResource("5_gh8yr")]
+
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-remote_path = NodePath("../Camera2D")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource("5_db656")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.2, 2.2)
@@ -268,6 +280,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
+[connection signal="health_changed" from="PlayerStats" to="CanvasLayer/HealthUI" method="set_health"]
 
 [editable path="Sword"]
 [editable path="Sword/Hitbox"]

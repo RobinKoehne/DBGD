@@ -1,10 +1,18 @@
 class_name HitBox
 extends Area2D
 
-var damage
-
 @onready var collision = $CollisionShape2D
 @onready var timer = $Timer
+@onready var stats
+@onready var parent
+@onready var damage
+
+func _ready():
+	parent = get_parent()
+	if parent:
+		stats = parent.get_node("Stats")
+		if stats:
+			damage = stats.damage
 
 func tempdisable():
 	collision.set_deferred("disabled", true)
@@ -12,6 +20,3 @@ func tempdisable():
 
 func _on_timer_timeout():
 	collision.set_deferred("disabled", false)
-	
-func _enter_tree():
-	damage = get_parent().damage

@@ -3,9 +3,7 @@ extends CharacterBody2D
 @onready var animation_player = $AnimationPlayer
 @onready var sprite = $Enemy1
 @onready var timer = $Timer
-
-@export var health = 100
-@export var damage = 0.5
+@onready var stats = $Stats
 
 enum{
 	IDLE,
@@ -44,8 +42,8 @@ func _on_timer_timeout():
 	current_state = choose_direction([IDLE, change_dir, Move])
 
 func _on_hurtbox_hurt(received_damage):
-	health -= received_damage
-	if health <= 0:
+	stats.health -= received_damage
+	if stats.health <= 0:
 		queue_free()
-	print("Enemy took", received_damage, " damage, total health:", health)
+	print("Enemy took", received_damage, " damage, total health:", stats.health)
 

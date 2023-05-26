@@ -1,3 +1,4 @@
 extends Node2D
 
-@export var damage = 10
+@onready var stats = $Stats
+@onready var damage = stats.damage

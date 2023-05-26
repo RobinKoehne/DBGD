@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://jtppxnr8u2gb"]
+[gd_scene load_steps=6 format=3 uid="uid://jtppxnr8u2gb"]
 
 [ext_resource type="Script" path="res://Scripts/sword.gd" id="1_0kums"]
 [ext_resource type="Texture2D" uid="uid://d0kfy23yp1tdx" path="res://Sprites/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" id="2_2gl87"]
 [ext_resource type="PackedScene" uid="uid://c7fgwktel6i43" path="res://Scenes/hitbox.tscn" id="3_myq1u"]
+[ext_resource type="PackedScene" uid="uid://bhfbk3wnobchc" path="res://Scenes/stats.tscn" id="4_tujv1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ejjg"]
 size = Vector2(12, 18)
@@ -27,5 +28,8 @@ collision_mask = 4
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_1ejjg")
+
+[node name="Stats" parent="." instance=ExtResource("4_tujv1")]
+damage = 10.0
 
 [editable path="Hitbox"]

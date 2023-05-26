@@ -5,6 +5,9 @@ extends CharacterBody2D
 @onready var sword_sprite = $Sword/Sprite2D
 @onready var sword_hitbox = $Sword/Hitbox
 @onready var sword = $Sword
+@onready var stats = $PlayerStats
+
+#@onready var damage = stats.damage
 
 const MAX_SPEED = 200
 const ACCELERATION = 3000
@@ -13,7 +16,6 @@ const FRICTION = 2000
 enum {MOVE, ATTACK, HIT}
 
 var state = MOVE
-var health = 100
 var old_velocity = Vector2.ZERO
 
 func _ready():
@@ -84,7 +86,7 @@ func hit_animation_finished():
 
 func _on_hurtbox_hurt(damage):
 	print("Player took damage")
-	health -= damage
-	if health <= 0:
+	stats.health -= damage
+	if stats.health <= 0:
 		print("Game Over")
 	state = HIT
