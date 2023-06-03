@@ -1,6 +1,5 @@
-[gd_scene load_steps=17 format=3 uid="uid://crgk5dpurrmv0"]
+[gd_scene load_steps=16 format=3 uid="uid://crgk5dpurrmv0"]
 
-[ext_resource type="Script" path="res://Map1.gd" id="1_ju6l0"]
 [ext_resource type="Texture2D" uid="uid://boitmhs8phwlm" path="res://TileSets/Floor.png" id="2_lep1b"]
 [ext_resource type="Texture2D" uid="uid://bp1pyex3a3rtd" path="res://TileSets/Walls.png" id="3_for7q"]
 [ext_resource type="Script" path="res://Scenes/Area2D2.gd" id="4_5ctgo"]
@@ -1292,7 +1291,6 @@ animations = [{
 
 [node name="Map1" type="Node2D"]
 position = Vector2(1, 0)
-script = ExtResource("1_ju6l0")
 
 [node name="Level" type="TileMap" parent="."]
 rotation = 0.0014698

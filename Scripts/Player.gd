@@ -76,8 +76,9 @@ func move_state(_delta):
 		state = ATTACK
 
 func attack_state():
-	add_child(sword)
-	animation_player.play("Attack")
+	if (sword.get_parent() == null):
+		add_child(sword)
+		animation_player.play("Attack")
 	
 func attack_animation_finished():
 	remove_child(sword)
@@ -90,8 +91,7 @@ func hit_animation_finished():
 	state = MOVE
 
 func _on_hurtbox_hurt(damage, area):
-	print("Player took damage")
 	stats.health -= damage
 	if stats.health <= 0:
-		print("Game Over")
+		get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
 	state = HIT
