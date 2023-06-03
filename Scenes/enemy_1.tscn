@@ -64,6 +64,7 @@ radius = 132.034
 
 [node name="Enemy1" type="CharacterBody2D"]
 position = Vector2(-1, -10)
+collision_layer = 0
 script = ExtResource("1_dhrmf")
 
 [node name="Enemy1" type="Sprite2D" parent="."]
