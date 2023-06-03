@@ -239,7 +239,6 @@ libraries = {
 }
 
 [node name="Sword" parent="." instance=ExtResource("3_mfed4")]
-visible = false
 position = Vector2(22, 7)
 
 [node name="Stats" parent="Sword" index="2"]

@@ -20,7 +20,7 @@ var old_velocity = Vector2.ZERO
 
 func _ready():
 	animation_player.play("Stand")
-	sword
+	remove_child(sword)
 
 func _physics_process(_delta):
 	match state:
@@ -76,9 +76,11 @@ func move_state(_delta):
 		state = ATTACK
 
 func attack_state():
+	add_child(sword)
 	animation_player.play("Attack")
 	
 func attack_animation_finished():
+	remove_child(sword)
 	state = MOVE
 
 func hit_state():
