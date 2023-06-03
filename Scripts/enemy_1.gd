@@ -4,11 +4,13 @@ extends CharacterBody2D
 @onready var sprite = $Enemy1
 @onready var timer = $Timer
 @onready var stats = $Stats
+@onready var playerDetectionZone = $PlayerDetectionZone
 
 enum{
 	IDLE,
 	change_dir,
-	Move	
+	Move,
+	CHASE
 }
 
 var speed = 30
@@ -27,7 +29,8 @@ func choose_direction(array):
 func _process(delta):
 	match current_state:
 		IDLE:
-			pass
+			seek_player()
+			animation_player.play("Stand")
 		change_dir:
 			dir = choose_direction([Vector2.RIGHT, Vector2.LEFT, Vector2.UP, Vector2.DOWN])
 		Move:
@@ -36,7 +39,22 @@ func _process(delta):
 			else: 
 				sprite.flip_h = 0
 			velocity = dir * speed
+			animation_player.play("Walk")
 			move_and_slide()
+			seek_player()
+		CHASE:
+			animation_player.play("Walk")
+			var player = playerDetectionZone.player
+			if player != null:
+				dir = (player.global_position - global_position).normalized()
+				velocity = dir * speed
+				move_and_slide()
+			else:
+				current_state = IDLE
+
+func seek_player():
+	if playerDetectionZone.hasPlayer:
+		current_state = CHASE
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, 500 * delta)

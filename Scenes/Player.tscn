@@ -229,6 +229,8 @@ height = 14.0
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(-2, -12)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_iqm5c")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -237,6 +239,7 @@ libraries = {
 }
 
 [node name="Sword" parent="." instance=ExtResource("3_mfed4")]
+visible = false
 position = Vector2(22, 7)
 
 [node name="Stats" parent="Sword" index="2"]

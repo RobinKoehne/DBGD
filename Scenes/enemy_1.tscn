@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bg3ttel3hq2u3"]
+[gd_scene load_steps=14 format=3 uid="uid://bg3ttel3hq2u3"]
 
 [ext_resource type="Script" path="res://Scripts/enemy_1.gd" id="1_dhrmf"]
 [ext_resource type="Texture2D" uid="uid://d0kfy23yp1tdx" path="res://Sprites/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" id="1_eauu2"]
 [ext_resource type="PackedScene" uid="uid://gb0iqodueojd" path="res://Scenes/hurtbox.tscn" id="3_8gwax"]
 [ext_resource type="PackedScene" uid="uid://c7fgwktel6i43" path="res://Scenes/hitbox.tscn" id="4_g2byb"]
 [ext_resource type="PackedScene" uid="uid://bhfbk3wnobchc" path="res://Scenes/stats.tscn" id="5_mgfse"]
+[ext_resource type="PackedScene" uid="uid://f0idmgk5kcu8" path="res://Scenes/player_detection_zone.tscn" id="6_yc7ic"]
 
 [sub_resource type="Animation" id="Animation_o3xpe"]
 resource_name = "Stand"
@@ -58,6 +59,9 @@ size = Vector2(14, 14)
 radius = 4.0
 height = 14.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ewafe"]
+radius = 132.034
+
 [node name="Enemy1" type="CharacterBody2D"]
 position = Vector2(-1, -10)
 script = ExtResource("1_dhrmf")
@@ -104,8 +108,15 @@ autostart = true
 max_health = 60
 health = 60
 
+[node name="PlayerDetectionZone" parent="." instance=ExtResource("6_yc7ic")]
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+position = Vector2(1, 10)
+shape = SubResource("CircleShape2D_ewafe")
+
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="Hurtbox"]
 [editable path="Hitbox"]
+[editable path="PlayerDetectionZone"]

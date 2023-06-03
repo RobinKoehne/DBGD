@@ -20,6 +20,7 @@ var old_velocity = Vector2.ZERO
 
 func _ready():
 	animation_player.play("Stand")
+	sword
 
 func _physics_process(_delta):
 	match state:
