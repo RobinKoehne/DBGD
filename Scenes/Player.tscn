@@ -101,27 +101,13 @@ tracks/2/keys = {
 "update": 0,
 "values": [1.5708]
 }
-tracks/3/type = "method"
+tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath(".")
+tracks/3/path = NodePath("Sword:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"hit_animation_finished"
-}]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sword:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -239,19 +225,20 @@ libraries = {
 }
 
 [node name="Sword" parent="." instance=ExtResource("3_mfed4")]
-position = Vector2(22, 7)
+position = Vector2(6, -22)
+rotation = 0.0
 
 [node name="Stats" parent="Sword" index="2"]
 damage = 10
 
 [node name="Player" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, 2)
+position = Vector2(0, -2)
 scale = Vector2(2, 2)
 texture = ExtResource("2_5fmsb")
 hframes = 32
 vframes = 32
-frame = 40
+frame = 44
 
 [node name="Hurtbox" parent="." instance=ExtResource("4_fw2d2")]
 collision_layer = 2

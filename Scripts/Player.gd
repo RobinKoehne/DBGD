@@ -18,6 +18,7 @@ enum {MOVE, ATTACK, HIT}
 var state = MOVE
 var old_velocity = Vector2.ZERO
 
+
 func _ready():
 	animation_player.play("Stand")
 	remove_child(sword)
@@ -59,7 +60,8 @@ func move_state(_delta):
 		if (old != sword_sprite.flip_v):
 			sword_sprite.move_local_y(45)
 			sword_hitbox.move_local_y(45)
-		animation_player.play("Walk")
+		if (animation_player.current_animation != "Hit"):
+			animation_player.play("Walk")
 	elif input_vector.x > 0:
 		sword_hitbox.knockback_vector.x = 1
 		sprite.flip_h = 0
@@ -68,9 +70,11 @@ func move_state(_delta):
 		if (old != sword_sprite.flip_v):
 			sword_sprite.move_local_y(-45)
 			sword_hitbox.move_local_y(-45)
-		animation_player.play("Walk")
+		if (animation_player.current_animation != "Hit"):
+			animation_player.play("Walk")
 	elif input_vector == Vector2.ZERO:
-		animation_player.play("Stand")
+		if (animation_player.current_animation != "Hit"):
+			animation_player.play("Walk")
 	
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
@@ -86,8 +90,6 @@ func attack_animation_finished():
 
 func hit_state():
 	animation_player.play("Hit")
-	
-func hit_animation_finished():
 	state = MOVE
 
 func _on_hurtbox_hurt(damage, area):
