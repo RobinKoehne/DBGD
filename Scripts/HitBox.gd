@@ -6,6 +6,7 @@ extends Area2D
 @onready var stats
 @onready var parent
 @onready var damage
+@onready var knockback_vector = Vector2.RIGHT
 
 func _ready():
 	parent = get_parent()

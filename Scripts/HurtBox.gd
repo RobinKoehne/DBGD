@@ -20,7 +20,7 @@ func _on_area_entered(area):
 				if area.has_method("tempdisable"):
 					area.tempdisable()
 			var damage = area.damage
-			emit_signal("hurt", damage)
+			emit_signal("hurt", damage, area)
 
 func _on_timer_timeout():
 	collision.set_deferred("disabled", false)

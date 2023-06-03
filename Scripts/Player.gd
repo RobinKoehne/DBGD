@@ -51,6 +51,7 @@ func move_state(_delta):
 	
 	# Animation	
 	if input_vector.x < 0:
+		sword_hitbox.knockback_vector.x = -1
 		sprite.flip_h = 1
 		var old = sword_sprite.flip_v
 		sword_sprite.flip_v = 1
@@ -59,6 +60,7 @@ func move_state(_delta):
 			sword_hitbox.move_local_y(45)
 		animation_player.play("Walk")
 	elif input_vector.x > 0:
+		sword_hitbox.knockback_vector.x = 1
 		sprite.flip_h = 0
 		var old = sword_sprite.flip_v
 		sword_sprite.flip_v = 0
@@ -84,7 +86,7 @@ func hit_state():
 func hit_animation_finished():
 	state = MOVE
 
-func _on_hurtbox_hurt(damage):
+func _on_hurtbox_hurt(damage, area):
 	print("Player took damage")
 	stats.health -= damage
 	if stats.health <= 0:
