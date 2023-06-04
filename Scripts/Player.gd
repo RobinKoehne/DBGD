@@ -93,12 +93,16 @@ func hit_state():
 	state = MOVE
 
 func _on_hurtbox_hurt(damage, area):
-	stats.health -= damage
-	if stats.health <= 0:
-		get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
-	state = HIT
-
+	if stats.defend:
+		stats.defend = false
+	else:
+		stats.health -= damage
+		if stats.health <= 0:
+			get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
+		state = HIT
 
 func _on_hurtbox_heal():
-	print("a")
 	stats.health += 1
+
+func _on_hurtbox_defend():
+	stats.defend = true

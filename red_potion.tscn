@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ae0ab"]
 size = Vector2(32, 32)
 
-[node name="RedPotion" type="Area2D" groups=["items"]]
-collision_layer = 2
+[node name="Red Potion" type="Area2D" groups=["items"]]
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_ndjdv")
 

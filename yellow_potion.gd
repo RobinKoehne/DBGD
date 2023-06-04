@@ -1,6 +1,6 @@
 extends Area2D
 
-var effect = "heal"
+var effect = "defend"
 
 func _on_area_entered(area):
 	if (area.is_in_group("player")):

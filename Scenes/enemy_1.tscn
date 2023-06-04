@@ -91,7 +91,6 @@ shape = SubResource("RectangleShape2D_o00vh")
 
 [node name="Hitbox" parent="." instance=ExtResource("4_g2byb")]
 collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(1, 5)
@@ -110,6 +109,7 @@ max_health = 60
 health = 60
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource("6_yc7ic")]
+collision_layer = 0
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 position = Vector2(1, 10)

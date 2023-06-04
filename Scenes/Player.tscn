@@ -240,7 +240,7 @@ hframes = 32
 vframes = 32
 frame = 44
 
-[node name="Hurtbox" parent="." instance=ExtResource("4_fw2d2")]
+[node name="Hurtbox" parent="." groups=["player"] instance=ExtResource("4_fw2d2")]
 collision_layer = 2
 collision_mask = 2
 
@@ -268,8 +268,11 @@ zoom = Vector2(2.2, 2.2)
 position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 
+[connection signal="defend" from="Hurtbox" to="." method="_on_hurtbox_defend"]
+[connection signal="defend" from="Hurtbox" to="CanvasLayer/HealthUI" method="_on_hurtbox_defend"]
 [connection signal="heal" from="Hurtbox" to="." method="_on_hurtbox_heal"]
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
+[connection signal="defend_changed" from="PlayerStats" to="CanvasLayer/HealthUI" method="_on_player_stats_defend_changed"]
 [connection signal="health_changed" from="PlayerStats" to="CanvasLayer/HealthUI" method="set_health"]
 
 [editable path="Sword"]

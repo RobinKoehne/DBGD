@@ -5,6 +5,7 @@ var health = 6 : set = set_health
 
 @onready var fullHearts = $FullHearts
 @onready var halfHearts = $HalfHearts
+@onready var shield = $Shield
 
 func set_health(value):
 	health = clamp(value, 0, max_health)
@@ -16,3 +17,6 @@ func set_health(value):
 		else:
 			fullHearts.size.x = floor(health/2) * 16
 			halfHearts.size.x = floor((health+1)/2) * 16
+
+func _on_player_stats_defend_changed(value):
+	shield.visible = !shield.visible
