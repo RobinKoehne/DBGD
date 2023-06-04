@@ -7,5 +7,6 @@ signal health_changed(value)
 @export var damage = 1
 
 func set_health(value):
-	health = value
-	emit_signal("health_changed", health)
+	if value <= max_health:
+		health = value
+		emit_signal("health_changed", health)

@@ -7,6 +7,7 @@ extends Area2D
 @onready var timer = $Timer
 
 signal hurt(damage)
+signal heal()
 
 func _on_area_entered(area):
 	if area.is_in_group("attack"):
@@ -21,20 +22,11 @@ func _on_area_entered(area):
 					area.tempdisable()
 			var damage = area.damage
 			emit_signal("hurt", damage, area)
+	
+	elif area.is_in_group("items"):
+		if area.get("effect") != null:
+			if area.get("effect") == "heal":
+				emit_signal("heal")
 
 func _on_timer_timeout():
 	collision.set_deferred("disabled", false)
-
-#func _init():
-#	collision_layer = 0
-#	collision_mask = 2
-
-#func _ready():
-#	area_entered.connect(self._on_area_entered())
-
-#func _on_area_entered(hitbox: HitBox):
-#	if hitbox == null:
-#		return
-#
-#	if owner.has_method("take_damage"):
-#		owner.take_damage(hitbox.damage )
