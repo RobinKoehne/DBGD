@@ -7,8 +7,6 @@ extends CharacterBody2D
 @onready var sword = $Sword
 @onready var stats = $PlayerStats
 
-#@onready var damage = stats.damage
-
 var MAX_SPEED = 200
 const ACCELERATION = 3000
 const FRICTION = 2000
