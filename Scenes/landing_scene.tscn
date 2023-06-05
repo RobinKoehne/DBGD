@@ -4765,6 +4765,12 @@ y_sort_enabled = true
 [node name="AnimatedEnemy1" parent="Entities" instance=ExtResource("6_wnpyw")]
 position = Vector2(176, -130)
 
+[node name="AnimatedEnemy2" parent="Entities" instance=ExtResource("6_wnpyw")]
+position = Vector2(-249, 144)
+
+[node name="AnimatedEnemy3" parent="Entities" instance=ExtResource("6_wnpyw")]
+position = Vector2(204, 287)
+
 [node name="Player" parent="Entities" instance=ExtResource("5_kqiqn")]
 
 [node name="Area2D" type="Area2D" parent="."]

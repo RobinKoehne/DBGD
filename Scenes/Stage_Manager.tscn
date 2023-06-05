@@ -96,16 +96,18 @@ _data = {
 script = ExtResource("1_bx3ku")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1156.0
-offset_bottom = 650.0
+offset_left = -555.0
+offset_top = -363.0
+offset_right = 601.0
+offset_bottom = 287.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 4.0
-offset_top = 138.0
-offset_right = 386.0
-offset_bottom = 239.0
+offset_left = -2.0
+offset_top = 100.0
+offset_right = 380.0
+offset_bottom = 201.0
 scale = Vector2(3, 3)
 text = "Loading......."
 horizontal_alignment = 1
