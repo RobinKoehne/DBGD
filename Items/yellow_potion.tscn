@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://75gkqf446nx3"]
 
 [ext_resource type="Script" path="res://Items/yellow_potion.gd" id="1_7kpw0"]
 [ext_resource type="Texture2D" uid="uid://1shq1l5d6snr" path="res://Sprites/item/potion/yellow.png" id="1_egn18"]

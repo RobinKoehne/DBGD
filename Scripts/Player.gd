@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 #@onready var damage = stats.damage
 
-const MAX_SPEED = 200
+var MAX_SPEED = 200
 const ACCELERATION = 3000
 const FRICTION = 2000
 
@@ -106,3 +106,16 @@ func _on_hurtbox_heal():
 
 func _on_hurtbox_defend():
 	stats.defend = true
+
+func _on_hurtbox_speed():
+	stats.speed = true
+	stats.speedTimer.start()
+
+func _on_player_stats_speed_changed(value):
+	if value == true:
+		MAX_SPEED = 300
+	else:
+		MAX_SPEED = 200
+
+func _on_speed_timer_timeout():
+	stats.speed = false

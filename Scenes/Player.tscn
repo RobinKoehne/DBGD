@@ -272,9 +272,13 @@ position_smoothing_speed = 1.0
 [connection signal="defend" from="Hurtbox" to="CanvasLayer/HealthUI" method="_on_hurtbox_defend"]
 [connection signal="heal" from="Hurtbox" to="." method="_on_hurtbox_heal"]
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
+[connection signal="speed" from="Hurtbox" to="." method="_on_hurtbox_speed"]
 [connection signal="defend_changed" from="PlayerStats" to="CanvasLayer/HealthUI" method="_on_player_stats_defend_changed"]
 [connection signal="health_changed" from="PlayerStats" to="CanvasLayer/HealthUI" method="set_health"]
+[connection signal="speed_changed" from="PlayerStats" to="." method="_on_player_stats_speed_changed"]
+[connection signal="timeout" from="PlayerStats/SpeedTimer" to="." method="_on_speed_timer_timeout"]
 
 [editable path="Sword"]
 [editable path="Sword/Hitbox"]
 [editable path="Hurtbox"]
+[editable path="PlayerStats"]

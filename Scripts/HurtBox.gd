@@ -9,6 +9,7 @@ extends Area2D
 signal hurt(damage)
 signal heal()
 signal defend()
+signal speed()
 
 func _on_area_entered(area):
 	if area.is_in_group("attack"):
@@ -31,6 +32,9 @@ func _on_area_entered(area):
 			
 			elif area.get("effect") == "defend":
 				emit_signal("defend")
+			
+			elif area.get("effect") == "speed":
+				emit_signal("speed")
 
 func _on_timer_timeout():
 	collision.set_deferred("disabled", false)
