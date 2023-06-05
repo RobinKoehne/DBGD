@@ -10,7 +10,9 @@ signal speed_changed(value)
 @export var defend = false : set = set_defend
 @export var speed = false : set = set_speed
 
-@onready var speedTimer = $SpeedTimer
+func _ready():
+	if get_parent().name == "Player":
+		var speedTimer = $SpeedTimer
 
 func set_health(value):
 	if value <= max_health:

@@ -1347,7 +1347,7 @@ position = Vector2(950, 1536)
 position = Vector2(3885, 1646)
 
 [node name="Player" parent="Entities" instance=ExtResource("5_ra2ln")]
-position = Vector2(3448, 1585)
+position = Vector2(42, 653)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 
