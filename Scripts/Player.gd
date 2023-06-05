@@ -62,7 +62,7 @@ func move_state(_delta):
 			sword_hitbox.move_local_y(45)
 		if (animation_player.current_animation != "Hit"):
 			animation_player.play("Walk")
-	elif input_vector.x > 0:
+	elif input_vector.x >= 0:
 		sword_hitbox.knockback_vector.x = 1
 		sprite.flip_h = 0
 		var old = sword_sprite.flip_v

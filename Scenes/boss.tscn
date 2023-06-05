@@ -1,0 +1,128 @@
+[gd_scene load_steps=21 format=3 uid="uid://pkojnsitk25j"]
+
+[ext_resource type="Script" path="res://Scenes/boss.gd" id="1_8h6r6"]
+[ext_resource type="Texture2D" uid="uid://xh4gfovre0yr" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/big_demon_run_anim_f3.png" id="2_tddct"]
+[ext_resource type="Texture2D" uid="uid://bqxf8x5xx56xa" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_anim_f0.png" id="3_sdecs"]
+[ext_resource type="PackedScene" uid="uid://gb0iqodueojd" path="res://Scenes/hurtbox.tscn" id="3_u3k7e"]
+[ext_resource type="PackedScene" uid="uid://c7fgwktel6i43" path="res://Scenes/hitbox.tscn" id="4_fobv2"]
+[ext_resource type="Texture2D" uid="uid://d2g588sa1uh45" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_anim_f1.png" id="4_ncmoj"]
+[ext_resource type="PackedScene" uid="uid://bhfbk3wnobchc" path="res://Scenes/stats.tscn" id="5_d51by"]
+[ext_resource type="Texture2D" uid="uid://kawlfvovthm3" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_anim_f2.png" id="5_w8wr2"]
+[ext_resource type="Texture2D" uid="uid://bv5qyp13ci3i1" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_anim_f3.png" id="6_ombl8"]
+[ext_resource type="PackedScene" uid="uid://f0idmgk5kcu8" path="res://Scenes/player_detection_zone.tscn" id="6_wmhet"]
+[ext_resource type="Texture2D" uid="uid://bpkgn83b1ph66" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/big_demon_run_anim_f0.png" id="7_o7vle"]
+[ext_resource type="Texture2D" uid="uid://qyx7srs5nu0l" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/big_demon_run_anim_f1.png" id="8_s2io8"]
+[ext_resource type="Texture2D" uid="uid://cb3tnjvim5sn2" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/big_demon_run_anim_f2.png" id="9_x4pi6"]
+
+[sub_resource type="Animation" id="Animation_o3xpe"]
+resource_name = "Stand"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_sdecs"), ExtResource("4_ncmoj"), ExtResource("5_w8wr2"), ExtResource("6_ombl8")]
+}
+
+[sub_resource type="Animation" id="Animation_uua0d"]
+resource_name = "Walk"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_o7vle"), ExtResource("8_s2io8"), ExtResource("9_x4pi6"), ExtResource("2_tddct")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l61a0"]
+_data = {
+"Stand": SubResource("Animation_o3xpe"),
+"Walk": SubResource("Animation_uua0d")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o00vh"]
+size = Vector2(10.5, 11.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nq5ke"]
+size = Vector2(14, 14)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6xx84"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ewafe"]
+radius = 228.035
+
+[node name="Boss" type="CharacterBody2D"]
+position = Vector2(-1, -10)
+collision_layer = 0
+script = ExtResource("1_8h6r6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("7_o7vle")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l61a0")
+}
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_u3k7e")]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0.75, 2.75)
+shape = SubResource("RectangleShape2D_o00vh")
+
+[node name="Hitbox" parent="." instance=ExtResource("4_fobv2")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_nq5ke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 10)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6xx84")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Stats" parent="." instance=ExtResource("5_d51by")]
+max_health = 120
+health = 120
+damage = 2
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource("6_wmhet")]
+collision_layer = 0
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+position = Vector2(1, 10)
+shape = SubResource("CircleShape2D_ewafe")
+
+[connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Hurtbox"]
+[editable path="Hitbox"]
+[editable path="PlayerDetectionZone"]
