@@ -1326,6 +1326,7 @@ shape = SubResource("CircleShape2D_efygk")
 debug_color = Color(0.529412, 0.572549, 0, 0.419608)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/OpenArea"]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_jvbdg")
 animation = &"open"
 
