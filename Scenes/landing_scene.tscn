@@ -1,13 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://fkpri06ji6nk"]
+[gd_scene load_steps=19 format=3]
 
 [ext_resource type="Texture2D" uid="uid://dpivus65kitit" path="res://Sprites/dc-dngn/Tilesets/spritesheet.png" id="1_nvyon"]
 [ext_resource type="Texture2D" uid="uid://8ah56hx0q7us" path="res://Sprites/dc-dngn/Tilesets/walls.png" id="2_so56i"]
 [ext_resource type="Texture2D" uid="uid://vomp5xy2h4jd" path="res://Sprites/dc-dngn/Tilesets/gateways.png" id="3_1kl5w"]
 [ext_resource type="Texture2D" uid="uid://wjmywe6mkaq7" path="res://Sprites/dc-dngn/Tilesets/Altare.png" id="4_ap5e2"]
 [ext_resource type="PackedScene" uid="uid://bn5colfcrdnbc" path="res://Scenes/Player.tscn" id="5_kqiqn"]
-[ext_resource type="PackedScene" uid="uid://ch01788ka1pde" path="res://yellow_potion.tscn" id="5_w1mm2"]
+[ext_resource type="PackedScene" uid="uid://ch01788ka1pde" path="res://Items/yellow_potion.tscn" id="5_w1mm2"]
 [ext_resource type="PackedScene" uid="uid://bg3ttel3hq2u3" path="res://Scenes/enemy_1.tscn" id="6_wnpyw"]
-[ext_resource type="PackedScene" uid="uid://brlm1cod0wm00" path="res://red_potion.tscn" id="8_kicrs"]
+[ext_resource type="PackedScene" uid="uid://brlm1cod0wm00" path="res://Items/red_potion.tscn" id="8_kicrs"]
 [ext_resource type="Script" path="res://Scenes/change_Scenes.gd" id="8_ssad7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0bmd"]

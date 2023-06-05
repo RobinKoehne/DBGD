@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ny7scix3d413"]
+
+[ext_resource type="Script" path="res://Items/sword_1.gd" id="1_hbel2"]
+[ext_resource type="Texture2D" uid="uid://dsm1mcvp05ahf" path="res://Sprites/item/weapon/short_sword2.png" id="2_stu5e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ae0ab"]
+size = Vector2(32, 32)
+
+[node name="Sword1" type="Area2D" groups=["items"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_hbel2")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_stu5e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ae0ab")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

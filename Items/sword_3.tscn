@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo17hkau56jp5"]
+
+[ext_resource type="Script" path="res://Items/sword_3.gd" id="1_h7xfx"]
+[ext_resource type="Texture2D" uid="uid://basuencev1a62" path="res://Sprites/item/weapon/blessed_blade.png" id="2_rlkko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ae0ab"]
+size = Vector2(32, 32)
+
+[node name="Sword3" type="Area2D" groups=["items"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_h7xfx")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_rlkko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ae0ab")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

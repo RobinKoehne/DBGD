@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdawd6ymvud43"]
+
+[ext_resource type="Script" path="res://Items/axe_2.gd" id="1_pcntw"]
+[ext_resource type="Texture2D" uid="uid://dd004xcyycspq" path="res://Sprites/item/weapon/broad_axe2.png" id="2_fu3oy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ae0ab"]
+size = Vector2(32, 32)
+
+[node name="Axe2" type="Area2D" groups=["items"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_pcntw")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_fu3oy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ae0ab")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

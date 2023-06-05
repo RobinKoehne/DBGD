@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0lrsj3p3vtvo"]
+
+[ext_resource type="Script" path="res://Items/green_potion.gd" id="1_bocd1"]
+[ext_resource type="Texture2D" uid="uid://54beml1fiyf" path="res://Sprites/item/potion/emerald.png" id="2_wrmp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81lcj"]
+size = Vector2(32, 32)
+
+[node name="Green Potion" type="Area2D" groups=["items"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_bocd1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_wrmp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_81lcj")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
