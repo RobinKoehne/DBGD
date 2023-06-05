@@ -1,11 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://bakqy37q22afc"]
+[gd_scene load_steps=17 format=3 uid="uid://bakqy37q22afc"]
 
 [ext_resource type="Texture2D" uid="uid://dpivus65kitit" path="res://Sprites/dc-dngn/Tilesets/spritesheet.png" id="1_nvyon"]
 [ext_resource type="Texture2D" uid="uid://8ah56hx0q7us" path="res://Sprites/dc-dngn/Tilesets/walls.png" id="2_so56i"]
 [ext_resource type="Texture2D" uid="uid://vomp5xy2h4jd" path="res://Sprites/dc-dngn/Tilesets/gateways.png" id="3_1kl5w"]
 [ext_resource type="Texture2D" uid="uid://wjmywe6mkaq7" path="res://Sprites/dc-dngn/Tilesets/Altare.png" id="4_ap5e2"]
 [ext_resource type="PackedScene" uid="uid://bn5colfcrdnbc" path="res://Scenes/Player.tscn" id="5_kqiqn"]
-[ext_resource type="PackedScene" uid="uid://c0lrsj3p3vtvo" path="res://Items/green_potion.tscn" id="6_23bpo"]
 [ext_resource type="PackedScene" uid="uid://bg3ttel3hq2u3" path="res://Scenes/enemy_1.tscn" id="6_wnpyw"]
 [ext_resource type="Script" path="res://Scenes/change_Scenes.gd" id="8_ssad7"]
 
@@ -4759,9 +4758,6 @@ position = Vector2(19, 0)
 tile_set = SubResource("TileSet_1iqpa")
 format = 2
 layer_0/tile_data = PackedInt32Array(-851969, 5767168, 0, -786433, 5767168, 1, -917504, 5832704, 0, -851968, 5832704, 1, -851973, 5767168, 0, -786437, 5767168, 1, -851972, 5832704, 0, -786436, 5832704, 1)
-
-[node name="Green Potion" parent="." instance=ExtResource("6_23bpo")]
-position = Vector2(-213, 23)
 
 [node name="Entities" type="Node2D" parent="."]
 y_sort_enabled = true
