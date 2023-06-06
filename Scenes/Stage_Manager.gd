@@ -15,7 +15,7 @@ func changeState(path):
 	await get_node("AnimationPlayer").animation_finished
 	
 	var stage = path.instantiate()
-	get_tree().get_root().get_child(1).free()
+	get_tree().get_root().get_node("Node2D").free()
 	get_tree().get_root().add_child(stage)
 	
 	

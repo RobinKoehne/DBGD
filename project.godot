@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 StageManager="*res://Scenes/Stage_Manager.tscn"
 BackgroundMusic="*res://Scenes/BackgroundMusic.tscn"
-PlayerStats="*res://Scenes/player_stats.tscn"
 
 [dotnet]
 
