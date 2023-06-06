@@ -6,10 +6,17 @@ extends CharacterBody2D
 @onready var sword_hitbox = $Sword/Hitbox
 @onready var sword = $Sword
 @onready var stats = $PlayerStats
+@onready var player = $AudioStreamPlayer
 
 var MAX_SPEED = 200
 const ACCELERATION = 3000
 const FRICTION = 2000
+
+var attackSounds = [
+	preload("res://sounds/battle/swing.wav"),
+	preload("res://sounds/battle/swing2.wav"),
+	preload("res://sounds/battle/swing3.wav"),
+]
 
 enum {MOVE, ATTACK, HIT}
 
@@ -81,6 +88,9 @@ func attack_state():
 	if (sword.get_parent() == null):
 		add_child(sword)
 		animation_player.play("Attack")
+		_playAttackSound()
+		
+		
 	
 func attack_animation_finished():
 	remove_child(sword)
@@ -117,3 +127,9 @@ func _on_player_stats_speed_changed(value):
 
 func _on_speed_timer_timeout():
 	stats.speed = false
+
+func _playAttackSound():
+	var soundIndex = randi_range(0, 2)
+	var sound = attackSounds[soundIndex]
+	player.stream = sound
+	player.play()

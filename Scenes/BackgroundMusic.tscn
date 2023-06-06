@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnhvxfm4mr4qt"]
+
+[ext_resource type="AudioStream" uid="uid://lo17qpex08df" path="res://Musik/Strike the Earth! (Plains of Passage) - Shovel Knight [OST].mp3" id="1_yiosv"]
+
+[node name="BackgroundMusic" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_yiosv")
+volume_db = -10.0
+autoplay = true

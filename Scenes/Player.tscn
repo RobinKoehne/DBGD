@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bn5colfcrdnbc"]
+[gd_scene load_steps=15 format=3 uid="uid://bn5colfcrdnbc"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_iqm5c"]
 [ext_resource type="Texture2D" uid="uid://d0kfy23yp1tdx" path="res://Sprites/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" id="2_5fmsb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://gb0iqodueojd" path="res://Scenes/hurtbox.tscn" id="4_fw2d2"]
 [ext_resource type="PackedScene" uid="uid://o3xsbk5fl8xe" path="res://Scenes/health_ui.tscn" id="5_db656"]
 [ext_resource type="PackedScene" uid="uid://bvv6wfbhlqqvi" path="res://Scenes/player_stats.tscn" id="5_gh8yr"]
+[ext_resource type="AudioStream" uid="uid://d2n12wr1sthwb" path="res://sounds/battle/swing2.wav" id="7_l7jm5"]
 
 [sub_resource type="Animation" id="Animation_l80rv"]
 resource_name = "Attack"
@@ -267,7 +268,10 @@ visible = false
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.2, 2.2)
 position_smoothing_enabled = true
-position_smoothing_speed = 1.0
+position_smoothing_speed = 3.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_l7jm5")
 
 [connection signal="defend" from="Hurtbox" to="." method="_on_hurtbox_defend"]
 [connection signal="defend" from="Hurtbox" to="CanvasLayer/HealthUI" method="_on_hurtbox_defend"]
