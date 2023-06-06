@@ -92,12 +92,14 @@ func attack_state():
 	if (sword.get_parent() != null):
 		isAttacking = true
 		sword.show()
+		sword.collision.disabled = false
 		animation_player.play("Attack")
 		_playAttackSound()
 	
 func attack_animation_finished():
 	sword.hide()
 	state = MOVE
+	sword.collision.disabled = true
 	isAttacking = false
 
 func hit_state():
