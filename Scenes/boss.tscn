@@ -60,7 +60,7 @@ _data = {
 size = Vector2(10.5, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq5ke"]
-size = Vector2(14, 14)
+size = Vector2(40, 50)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6xx84"]
 radius = 4.0
@@ -97,7 +97,7 @@ shape = SubResource("RectangleShape2D_o00vh")
 collision_layer = 2
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(1, 5)
+position = Vector2(-2, 6)
 shape = SubResource("RectangleShape2D_nq5ke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
