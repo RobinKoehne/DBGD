@@ -229,9 +229,6 @@ libraries = {
 position = Vector2(6, -22)
 rotation = 0.0
 
-[node name="CollisionShape2D" parent="Sword/Hitbox" index="0"]
-disabled = true
-
 [node name="Stats" parent="Sword" index="2"]
 damage = 10
 

@@ -44,6 +44,7 @@ var old_velocity = Vector2.ZERO
 func _ready():
 	animation_player.play("Stand")
 	sword.hide()
+	sword.collision.disabled = true
 	walkingSounds.shuffle()
 	
 func _process(_delta):
