@@ -270,8 +270,10 @@ zoom = Vector2(2.2, 2.2)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="SwordPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_l7jm5")
+
+[node name="WalkPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="defend" from="Hurtbox" to="." method="_on_hurtbox_defend"]
 [connection signal="defend" from="Hurtbox" to="CanvasLayer/HealthUI" method="_on_hurtbox_defend"]

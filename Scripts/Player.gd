@@ -6,18 +6,33 @@ extends CharacterBody2D
 @onready var sword_hitbox = $Sword/Hitbox
 @onready var sword = $Sword
 @onready var stats = $PlayerStats
-@onready var player = $AudioStreamPlayer
+@onready var swordPlayer = $SwordPlayer
+@onready var walkingPlayer = $WalkPlayer
 
 var MAX_SPEED = 200
 const ACCELERATION = 3000
 const FRICTION = 2000
 
 var isAttacking = false
+var isPlayingWalkingSound = false
 
 var attackSounds = [
 	preload("res://sounds/battle/swing.wav"),
 	preload("res://sounds/battle/swing2.wav"),
 	preload("res://sounds/battle/swing3.wav"),
+]
+
+var walkingSounds = [
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-001.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-001.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-001.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-001.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-001.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-002.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-003.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-004.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-005.ogg"),
+	preload("res://sounds/FreeSteps/Dirt/Steps_dirt-006.ogg"),
 ]
 
 enum {MOVE, ATTACK, HIT}
@@ -29,6 +44,10 @@ var old_velocity = Vector2.ZERO
 func _ready():
 	animation_player.play("Stand")
 	sword.hide()
+	walkingSounds.shuffle()
+	
+func _process(_delta):
+	isPlayingWalkingSound = walkingPlayer.playing
 
 func _physics_process(_delta):
 	match state:
@@ -51,6 +70,7 @@ func move_state(_delta):
 	if input_vector != Vector2.ZERO:
 		velocity = old_velocity + ACCELERATION * input_vector * _delta
 		velocity = velocity.limit_length(MAX_SPEED)
+		play_walking_sound()
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * _delta)
 	
@@ -103,6 +123,15 @@ func attack_animation_finished():
 func hit_state():
 	animation_player.play("Hit")
 	state = MOVE
+	
+func play_walking_sound():
+	if(isPlayingWalkingSound):
+		return
+	var soundIndex = randi_range(0, walkingSounds.size() - 1)
+	var sound = walkingSounds[soundIndex]
+	walkingPlayer.stream = sound;
+	walkingPlayer.play()
+	isPlayingWalkingSound = true
 
 func _on_hurtbox_hurt(damage, area):
 	if stats.defend:
@@ -135,5 +164,5 @@ func _on_speed_timer_timeout():
 func _playAttackSound():
 	var soundIndex = randi_range(0, 2)
 	var sound = attackSounds[soundIndex]
-	player.stream = sound
-	player.play()
+	swordPlayer.stream = sound
+	swordPlayer.play()
