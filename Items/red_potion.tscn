@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://c7spcnuw01ixh"]
 
 [ext_resource type="Texture2D" uid="uid://c2r6nvcjm14bo" path="res://Sprites/item/potion/ruby.png" id="1_kicol"]
 [ext_resource type="Script" path="res://Items/red_potion.gd" id="1_ndjdv"]
@@ -10,8 +10,6 @@ size = Vector2(32, 32)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_ndjdv")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

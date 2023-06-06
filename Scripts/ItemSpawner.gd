@@ -1,5 +1,8 @@
 extends Area2D
 
+@onready var player = $Player
+@onready var chestPlayer = $ChestSound
+
 var animated_sprite: AnimatedSprite2D
 var playerInRange = false
 var isOpen = false
@@ -7,15 +10,15 @@ var items = [
 	preload("res://Items/red_potion.tscn"),
 	preload("res://Items/yellow_potion.tscn"),
 	preload("res://Items/green_potion.tscn"),
-	preload("res://Items/sword_1.tscn"),
-	preload("res://Items/sword_2.tscn"),
-	preload("res://Items/sword_3.tscn"),
-	preload("res://Items/axe_1.tscn"),
-	preload("res://Items/axe_2.tscn"),
-	preload("res://Items/axe_3.tscn"),
-	preload("res://Items/battleaxe_1.tscn"),
-	preload("res://Items/battleaxe_2.tscn"),
-	preload("res://Items/battleaxe_3.tscn")
+	#preload("res://Items/sword_1.tscn"),
+	#preload("res://Items/sword_2.tscn"),
+	#preload("res://Items/sword_3.tscn"),
+	#preload("res://Items/axe_1.tscn"),
+	#preload("res://Items/axe_2.tscn"),
+	#preload("res://Items/axe_3.tscn"),
+	#preload("res://Items/battleaxe_1.tscn"),
+	#preload("res://Items/battleaxe_2.tscn"),
+	#preload("res://Items/battleaxe_3.tscn")
 ]
 
 var itemRadius = 50
@@ -39,6 +42,7 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("ui_accept") and playerInRange:
 		animated_sprite.play("open")
+		chestPlayer.play()
 		spawnItems()
 		isOpen = true
 

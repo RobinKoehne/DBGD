@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://crgk5dpurrmv0"]
+[gd_scene load_steps=21 format=3 uid="uid://crgk5dpurrmv0"]
 
 [ext_resource type="Script" path="res://Scenes/Map1.gd" id="1_bixv1"]
 [ext_resource type="Texture2D" uid="uid://boitmhs8phwlm" path="res://TileSets/Floor.png" id="2_lep1b"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bdxv1hhmb6hd7" path="res://Sprites/0x72_DungeonTilesetII_v1.4/frames/chest_full_open_anim_f2.png" id="8_rkmit"]
 [ext_resource type="PackedScene" uid="uid://pkojnsitk25j" path="res://Scenes/boss.tscn" id="9_7d8ib"]
 [ext_resource type="PackedScene" uid="uid://crc6gtn4umedq" path="res://Scenes/enemy_2.tscn" id="9_ice6u"]
+[ext_resource type="AudioStream" uid="uid://5jg0f850n2uu" path="res://sounds/world/door.wav" id="9_rjbdw"]
+[ext_resource type="AudioStream" uid="uid://c0y71jlhe6ofk" path="res://sounds/world/gate.mp3" id="12_ajj80"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e3ai"]
 texture = ExtResource("2_lep1b")
@@ -1322,6 +1324,8 @@ shape = SubResource("RectangleShape2D_tiaqm")
 
 [node name="OpenArea" type="Area2D" parent="StaticBody2D"]
 scale = Vector2(4, 4)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("6_3w5uf")
 
 [node name="OpenCollider" type="CollisionShape2D" parent="StaticBody2D/OpenArea"]
@@ -1332,6 +1336,10 @@ debug_color = Color(0.529412, 0.572549, 0, 0.419608)
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_jvbdg")
 animation = &"open"
+
+[node name="ChestSound" type="AudioStreamPlayer" parent="StaticBody2D/OpenArea"]
+stream = ExtResource("9_rjbdw")
+volume_db = -10.0
 
 [node name="Entities" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -1349,7 +1357,10 @@ position = Vector2(950, 1536)
 position = Vector2(3885, 1646)
 
 [node name="Player" parent="Entities" instance=ExtResource("5_ra2ln")]
-position = Vector2(3885, 1569)
+position = Vector2(1350, 1940)
+
+[node name="GatePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ajj80")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 

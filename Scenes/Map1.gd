@@ -4,6 +4,8 @@ var treasureRoomOpen = false
 var nextLevelOpen = false
 @onready var tilemap = $Level
 @onready var player = $Entities/Player
+@onready var gatePlayer = $GatePlayer
+var gateSound = preload("res://Scenes/gate.mp3")
 var treasureCoordinates = [
 	Vector2i(24,32),
 	Vector2i(24,33),
@@ -18,6 +20,7 @@ var nextLevelCoordinates = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	gatePlayer.stream = gateSound
 	pass
 
 
@@ -35,6 +38,7 @@ func openTreasureRoom():
 	treasureRoomOpen = true
 	for coord in treasureCoordinates:
 		tilemap.set_cell(0, coord, 0, Vector2i(4, 0))
+	gatePlayer.play()
 	
 
 func openNextLevel():
@@ -43,3 +47,4 @@ func openNextLevel():
 	nextLevelOpen = true
 	for coord in nextLevelCoordinates:
 		tilemap.set_cell(0, coord, 0, Vector2i(4, 0))
+	gatePlayer.play()
