@@ -12,6 +12,8 @@ var MAX_SPEED = 200
 const ACCELERATION = 3000
 const FRICTION = 2000
 
+var isAttacking = false
+
 var attackSounds = [
 	preload("res://sounds/battle/swing.wav"),
 	preload("res://sounds/battle/swing2.wav"),
@@ -26,7 +28,7 @@ var old_velocity = Vector2.ZERO
 
 func _ready():
 	animation_player.play("Stand")
-	remove_child(sword)
+	sword.hide()
 
 func _physics_process(_delta):
 	match state:
@@ -85,16 +87,18 @@ func move_state(_delta):
 		state = ATTACK
 
 func attack_state():
-	if (sword.get_parent() == null):
-		add_child(sword)
+	if (isAttacking):
+		return
+	if (sword.get_parent() != null):
+		isAttacking = true
+		sword.show()
 		animation_player.play("Attack")
 		_playAttackSound()
-		
-		
 	
 func attack_animation_finished():
-	remove_child(sword)
+	sword.hide()
 	state = MOVE
+	isAttacking = false
 
 func hit_state():
 	animation_player.play("Hit")
