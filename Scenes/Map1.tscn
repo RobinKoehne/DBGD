@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://crgk5dpurrmv0"]
+[gd_scene load_steps=22 format=3 uid="uid://crgk5dpurrmv0"]
 
 [ext_resource type="Script" path="res://Scenes/Map1.gd" id="1_bixv1"]
 [ext_resource type="Texture2D" uid="uid://boitmhs8phwlm" path="res://TileSets/Floor.png" id="2_lep1b"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://crc6gtn4umedq" path="res://Scenes/enemy_2.tscn" id="9_ice6u"]
 [ext_resource type="AudioStream" uid="uid://5jg0f850n2uu" path="res://sounds/world/door.wav" id="9_rjbdw"]
 [ext_resource type="AudioStream" uid="uid://c0y71jlhe6ofk" path="res://sounds/world/gate.mp3" id="12_ajj80"]
+[ext_resource type="PackedScene" uid="uid://b63c36qqdmwnd" path="res://Scenes/Stage_Manager.tscn" id="14_6tun8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e3ai"]
 texture = ExtResource("2_lep1b")
@@ -1386,6 +1387,8 @@ position = Vector2(44, 650)
 [node name="GatePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_ajj80")
 
+[node name="CanvasLayer2" parent="." instance=ExtResource("14_6tun8")]
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="area_entered" from="Area2D2" to="Area2D2" method="_on_area_entered"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
@@ -1395,3 +1398,4 @@ stream = ExtResource("12_ajj80")
 [editable path="Entities/Player/Sword/Hitbox"]
 [editable path="Entities/Player/Hurtbox"]
 [editable path="Entities/Player/PlayerStats"]
+[editable path="CanvasLayer2"]

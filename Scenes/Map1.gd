@@ -2,6 +2,7 @@ extends Node2D
 
 var treasureRoomOpen = false
 var nextLevelOpen = false
+
 @onready var tilemap = $Level
 @onready var player = $Entities/Player
 @onready var gatePlayer = $GatePlayer
@@ -20,6 +21,13 @@ var nextLevelCoordinates = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var animation = $CanvasLayer2/AnimationPlayer
+	var colorRect = $CanvasLayer2/ColorRect
+	
+	colorRect.show()
+	animation.play("TransOut")
+	await animation.animation_finished
+	colorRect.hide
 	gatePlayer.stream = gateSound
 	pass
 

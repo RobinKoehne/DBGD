@@ -3,6 +3,8 @@ extends Area2D
 var entered = false
 
 var killed_enemies = 0
+@onready var animation = $CanvasLayer/AnimationPlayer
+@onready var colorRect = $CanvasLayer/ColorRect
 
 func _on_body_entered(body: PhysicsBody2D):
 	entered = true
@@ -16,7 +18,16 @@ func _on_body_exited(body):
 func _process(delta):
 	if killed_enemies == 3:
 		killed_enemies = 0
-		StageManager.changeState(StageManager.map1)
+		colorRect.show()
+		animation.play("TransIn")
+		await animation.animation_finished
+		colorRect.hide()
+		get_tree().change_scene_to_file("res://Scenes/Map1.tscn")
+
+		
+
+		
+		
 
 
 

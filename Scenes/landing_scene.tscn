@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bakqy37q22afc"]
+[gd_scene load_steps=18 format=3 uid="uid://bakqy37q22afc"]
 
 [ext_resource type="Texture2D" uid="uid://dpivus65kitit" path="res://Sprites/dc-dngn/Tilesets/spritesheet.png" id="1_nvyon"]
 [ext_resource type="Texture2D" uid="uid://8ah56hx0q7us" path="res://Sprites/dc-dngn/Tilesets/walls.png" id="2_so56i"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://wjmywe6mkaq7" path="res://Sprites/dc-dngn/Tilesets/Altare.png" id="4_ap5e2"]
 [ext_resource type="PackedScene" uid="uid://bn5colfcrdnbc" path="res://Scenes/Player.tscn" id="5_kqiqn"]
 [ext_resource type="PackedScene" uid="uid://bg3ttel3hq2u3" path="res://Scenes/enemy_1.tscn" id="6_wnpyw"]
+[ext_resource type="PackedScene" uid="uid://b63c36qqdmwnd" path="res://Scenes/Stage_Manager.tscn" id="8_lsxlt"]
 [ext_resource type="Script" path="res://Scenes/change_Scenes.gd" id="8_ssad7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0bmd"]
@@ -4783,8 +4784,12 @@ position = Vector2(-15, -204)
 scale = Vector2(2.5, 2.5)
 shape = SubResource("RectangleShape2D_8vqti")
 
+[node name="CanvasLayer" parent="Area2D" instance=ExtResource("8_lsxlt")]
+
 [connection signal="killed" from="Entities/AnimatedEnemy1" to="Area2D" method="_on_animated_enemy_1_killed"]
 [connection signal="killed" from="Entities/AnimatedEnemy2" to="Area2D" method="_on_animated_enemy_2_killed"]
 [connection signal="killed" from="Entities/AnimatedEnemy3" to="Area2D" method="_on_animated_enemy_3_killed"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+
+[editable path="Area2D/CanvasLayer"]
