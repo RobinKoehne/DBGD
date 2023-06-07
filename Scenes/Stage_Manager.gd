@@ -10,7 +10,7 @@ func _ready():
 	
 func changeState(path):
 	get_node("ColorRect").show()
-	get_node("Label").show()
+	get_node("Label").hide()
 	get_node("AnimationPlayer").play("TransIn")
 	await get_node("AnimationPlayer").animation_finished
 	
