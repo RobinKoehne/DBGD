@@ -105,8 +105,6 @@ shape = SubResource("CapsuleShape2D_6xx84")
 autostart = true
 
 [node name="Stats" parent="." instance=ExtResource("5_mgfse")]
-max_health = 60
-health = 60
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource("6_yc7ic")]
 collision_layer = 0

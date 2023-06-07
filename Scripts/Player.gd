@@ -8,6 +8,9 @@ extends CharacterBody2D
 @onready var stats = $PlayerStats
 @onready var swordPlayer = $SwordPlayer
 @onready var walkingPlayer = $WalkPlayer
+@onready var playerStats: PlayerStats = get_tree().root.get_node("PlayerStats")
+@onready var timer = $WalkingTimer
+
 
 var MAX_SPEED = 200
 const ACCELERATION = 3000
@@ -46,9 +49,10 @@ func _ready():
 	sword.hide()
 	sword.collision.disabled = true
 	walkingSounds.shuffle()
+	timer.start()
 	
 func _process(_delta):
-	isPlayingWalkingSound = walkingPlayer.playing
+	pass
 
 func _physics_process(_delta):
 	match state:
@@ -135,18 +139,19 @@ func play_walking_sound():
 	walkingPlayer.stream = sound;
 	walkingPlayer.play()
 	isPlayingWalkingSound = true
+	timer.start()
 
 func _on_hurtbox_hurt(damage, area):
 	if stats.defend:
 		stats.defend = false
 	else:
-		stats.health -= damage
-		if stats.health <= 0:
+		playerStats.currentHealth -= damage
+		if playerStats.currentHealth <= 0:
 			get_tree().change_scene_to_file("res://Scenes/game_over_screen.tscn")
 		state = HIT
 
 func _on_hurtbox_heal():
-	stats.health += 1
+	playerStats.currentHealth += 1
 
 func _on_hurtbox_defend():
 	stats.defend = true
@@ -169,3 +174,8 @@ func _playAttackSound():
 	var sound = attackSounds[soundIndex]
 	swordPlayer.stream = sound
 	swordPlayer.play()
+
+
+func _on_walking_timer_timeout():
+	print("Timeout")
+	isPlayingWalkingSound = false

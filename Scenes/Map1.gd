@@ -18,6 +18,26 @@ var nextLevelCoordinates = [
 	Vector2i(69,34),
 ]
 
+var walkingSounds = [
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-001.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-002.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-002.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-002.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-003.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-004.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-005.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-003.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-003.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-003.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-001.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-005.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-005.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-005.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-003.ogg"),
+	preload("res://sounds/FreeSteps/Tiles/Steps_tiles-001.ogg"),
+	
+]
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,6 +50,7 @@ func _ready():
 	colorRect.hide
 	gatePlayer.stream = gateSound
 	pass
+	player.walkingSounds = walkingSounds
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -10,15 +10,16 @@ signal speed_changed(value)
 @export var defend = false : set = set_defend
 @export var speed = false : set = set_speed
 @onready var speedTimer = $SpeedTimer
+@onready var playerStats: PlayerStats = get_tree().root.get_node("PlayerStats")
 
 func _ready():
 	if get_parent().name == "Player":
 		var speedTimer = $SpeedTimer
 
 func set_health(value):
-	if value <= max_health:
-		health = value
-		emit_signal("health_changed", health)
+	health = value
+	if value <= health:
+		emit_signal("health_changed", value)
 
 func set_defend(value):
 	defend = value

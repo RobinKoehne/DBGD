@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bakqy37q22afc"]
+[gd_scene load_steps=19 format=3 uid="uid://bakqy37q22afc"]
 
 [ext_resource type="Texture2D" uid="uid://dpivus65kitit" path="res://Sprites/dc-dngn/Tilesets/spritesheet.png" id="1_nvyon"]
 [ext_resource type="Texture2D" uid="uid://8ah56hx0q7us" path="res://Sprites/dc-dngn/Tilesets/walls.png" id="2_so56i"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bg3ttel3hq2u3" path="res://Scenes/enemy_1.tscn" id="6_wnpyw"]
 [ext_resource type="PackedScene" uid="uid://b63c36qqdmwnd" path="res://Scenes/Stage_Manager.tscn" id="8_lsxlt"]
 [ext_resource type="Script" path="res://Scenes/change_Scenes.gd" id="8_ssad7"]
+[ext_resource type="AudioStream" uid="uid://c8ndbtg0h535e" path="res://sounds/battle/spell.wav" id="9_1wtna"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0bmd"]
 texture = ExtResource("1_nvyon")
@@ -4785,6 +4786,16 @@ scale = Vector2(2.5, 2.5)
 shape = SubResource("RectangleShape2D_8vqti")
 
 [node name="CanvasLayer" parent="Area2D" instance=ExtResource("8_lsxlt")]
+
+[node name="ColorRect" parent="Area2D/CanvasLayer" index="0"]
+visible = false
+offset_left = -2509.0
+offset_top = -1528.0
+offset_right = 5088.0
+offset_bottom = 3257.0
+
+[node name="levelChanged" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource("9_1wtna")
 
 [connection signal="killed" from="Entities/AnimatedEnemy1" to="Area2D" method="_on_animated_enemy_1_killed"]
 [connection signal="killed" from="Entities/AnimatedEnemy2" to="Area2D" method="_on_animated_enemy_2_killed"]
