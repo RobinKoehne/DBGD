@@ -18,6 +18,8 @@ var current_state = IDLE
 var dir = Vector2.RIGHT
 var knockback = Vector2.ZERO
 
+signal killed()
+
 func _ready():
 	animation_player.play("Stand")
 	randomize()
@@ -69,6 +71,7 @@ func _on_hurtbox_hurt(received_damage, area):
 	knockback = area.knockback_vector * 210
 	stats.health -= received_damage
 	if stats.health <= 0:
+		emit_signal("killed")
 		queue_free()
 	print("Enemy took", received_damage, " damage, total health:", stats.health)
 

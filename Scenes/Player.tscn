@@ -263,7 +263,6 @@ scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource("5_db656")]
-visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.2, 2.2)

@@ -9,6 +9,7 @@ signal speed_changed(value)
 @export var damage = 1
 @export var defend = false : set = set_defend
 @export var speed = false : set = set_speed
+@onready var speedTimer = $SpeedTimer
 
 func _ready():
 	if get_parent().name == "Player":

@@ -40,7 +40,7 @@ func _process(delta):
 	if isOpen:
 		return
 	
-	if Input.is_action_just_pressed("ui_accept") and playerInRange:
+	if Input.is_action_just_pressed("open") and playerInRange:
 		animated_sprite.play("open")
 		chestPlayer.play()
 		spawnItems()

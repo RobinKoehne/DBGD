@@ -153,7 +153,7 @@ func _on_hurtbox_defend():
 
 func _on_hurtbox_speed():
 	stats.speed = true
-	stats.speedTimesar.start()
+	stats.speedTimer.start()
 
 func _on_player_stats_speed_changed(value):
 	if value == true:
