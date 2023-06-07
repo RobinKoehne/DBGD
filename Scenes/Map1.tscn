@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://crgk5dpurrmv0"]
+[gd_scene load_steps=22 format=3 uid="uid://crgk5dpurrmv0"]
 
 [ext_resource type="Script" path="res://Scenes/Map1.gd" id="1_bixv1"]
 [ext_resource type="Texture2D" uid="uid://boitmhs8phwlm" path="res://TileSets/Floor.png" id="2_lep1b"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://pkojnsitk25j" path="res://Scenes/boss.tscn" id="9_7d8ib"]
 [ext_resource type="PackedScene" uid="uid://crc6gtn4umedq" path="res://Scenes/enemy_2.tscn" id="9_ice6u"]
 [ext_resource type="AudioStream" uid="uid://5jg0f850n2uu" path="res://sounds/world/door.wav" id="9_rjbdw"]
+[ext_resource type="PackedScene" uid="uid://75gkqf446nx3" path="res://Items/yellow_potion.tscn" id="10_fp0xi"]
 [ext_resource type="AudioStream" uid="uid://c0y71jlhe6ofk" path="res://sounds/world/gate.mp3" id="12_ajj80"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e3ai"]
@@ -1341,6 +1342,9 @@ animation = &"open"
 stream = ExtResource("9_rjbdw")
 volume_db = -10.0
 
+[node name="Yellow Potion" parent="." instance=ExtResource("10_fp0xi")]
+position = Vector2(3808, 798)
+
 [node name="Entities" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -1350,6 +1354,18 @@ position = Vector2(953, 588)
 [node name="Enemy2_2" parent="Entities" instance=ExtResource("9_ice6u")]
 position = Vector2(2287, 1065)
 
+[node name="Enemy2_3" parent="Entities" instance=ExtResource("9_ice6u")]
+position = Vector2(2138, 1973)
+
+[node name="Enemy2_4" parent="Entities" instance=ExtResource("9_ice6u")]
+position = Vector2(2046, 589)
+
+[node name="Enemy2_5" parent="Entities" instance=ExtResource("9_ice6u")]
+position = Vector2(1462, 1049)
+
+[node name="Enemy2_6" parent="Entities" instance=ExtResource("9_ice6u")]
+position = Vector2(3808, 798)
+
 [node name="Enemy_treasure" parent="Entities" instance=ExtResource("9_ice6u")]
 position = Vector2(950, 1536)
 
@@ -1357,7 +1373,7 @@ position = Vector2(950, 1536)
 position = Vector2(3885, 1646)
 
 [node name="Player" parent="Entities" instance=ExtResource("5_ra2ln")]
-position = Vector2(1350, 1940)
+position = Vector2(43, 651)
 
 [node name="GatePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_ajj80")
