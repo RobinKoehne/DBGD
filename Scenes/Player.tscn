@@ -274,6 +274,9 @@ stream = ExtResource("7_l7jm5")
 
 [node name="WalkPlayer" type="AudioStreamPlayer" parent="."]
 
+[node name="WalkingTimer" type="Timer" parent="."]
+wait_time = 0.75
+
 [connection signal="defend" from="Hurtbox" to="." method="_on_hurtbox_defend"]
 [connection signal="defend" from="Hurtbox" to="CanvasLayer/HealthUI" method="_on_hurtbox_defend"]
 [connection signal="heal" from="Hurtbox" to="." method="_on_hurtbox_heal"]
@@ -283,6 +286,7 @@ stream = ExtResource("7_l7jm5")
 [connection signal="health_changed" from="PlayerStats" to="CanvasLayer/HealthUI" method="set_health"]
 [connection signal="speed_changed" from="PlayerStats" to="." method="_on_player_stats_speed_changed"]
 [connection signal="timeout" from="PlayerStats/SpeedTimer" to="." method="_on_speed_timer_timeout"]
+[connection signal="timeout" from="WalkingTimer" to="." method="_on_walking_timer_timeout"]
 
 [editable path="Sword"]
 [editable path="Sword/Hitbox"]
