@@ -96,10 +96,10 @@ _data = {
 script = ExtResource("1_bx3ku")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -555.0
-offset_top = -363.0
-offset_right = 1760.0
-offset_bottom = 1192.0
+offset_left = -1857.0
+offset_top = -1081.0
+offset_right = 2519.0
+offset_bottom = 1668.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
